@@ -30,24 +30,39 @@
         <p>파티더풀문 대보름</p>
       </section>
       <section
-        class="attend py-[40px] px-0 m-0 transition ease-in-out duration-1000 delay-1000"
-        style="-webkit-text-stroke: 0.2px;"
+        class="attend py-[40px] px-0 m-0"
+        style="
+          -webkit-text-stroke: 0.2px;
+          --animaate-delay: 1s;
+          --animate-delay: 1s;
+          --animate-repeat: 1;
+        "
       >
-        <h3
-          class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]"
-          style="-webkit-text-stroke: 0.2px;"
-        >
-          참석 의사 전달
-        </h3>
         <div
-          class="sectionDesc text-[#544f4f] text-[1.4rem] leading-[1.75] mt-[20px] py-0 px-[33px]"
+          class="anibox"
+          style="
+            animation-name: fadeInUp;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            opacity: 1;
+          "
         >
-          신랑, 신부에게 참석의사를
-          <br />
-          미리 전달할 수있어요.
-        </div>
-        <div class="attendBtn">
-          <button>참석의사 전달하기</button>
+          <h3
+            class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]"
+            style="-webkit-text-stroke: 0.2px;"
+          >
+            참석 의사 전달
+          </h3>
+          <div
+            class="sectionDesc text-[#544f4f] text-[1.4rem] leading-[1.75] mt-[20px] py-0 px-[33px]"
+          >
+            신랑, 신부에게 참석의사를
+            <br />
+            미리 전달할 수있어요.
+          </div>
+          <div class="attendBtn">
+            <button>참석의사 전달하기</button>
+          </div>
         </div>
       </section>
       <footer class="py-[20px]">
