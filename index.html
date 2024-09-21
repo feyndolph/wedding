@@ -41,7 +41,7 @@
           style="-webkit-text-stroke: 0px;"
         >
           <h3
-            class="flex justify-center gap-4 pb-[5px] text-[30px] leading-[20px]"
+            class="flex justify-center gap-4 pb-[5px] text-[30px] leading-[20px] text-[#49413a]"
           >
             2025 <span class="text-[21px] leading-[1]">/</span> 04
             <span class="text-[21px] leading-[1]">/</span> 06
@@ -51,7 +51,29 @@
           </div>
         </div>
         <div class="intro-img">
-          <img src="./assets/images/intro-main.jpeg" alt="" />
+          <!--Waves Container-->
+          <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+          </svg>
+          </div>
+          <!--Waves end-->
+          <div style="position: relative;">
+            <img
+              src="./assets/images/intro-main.jpeg"
+              alt=""
+              style="border: 0; vertical-align: middle;"
+            />
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
         </div>
         <div
           class="intro-desc pt-[30px] pb-[20px] text-[#000000]"
