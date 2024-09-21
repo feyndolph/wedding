@@ -27,6 +27,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/wedding.css" />
+    <!-- Naver Map-->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8p9jw9mxt6"></script>
   </head>
   <body
     class="flex justify-center box-border max-w-full antialiased text-[1.2rem] bg-[#efefef] font-['Gowun_Dodum']"
@@ -132,8 +134,41 @@
           <div class="text-[1.6rem] text-[#888888] leading-[3.2rem]">
             부산 기장군 기장읍 기장해안로 98<br />오시리아스퀘어디101호 대보름
           </div>
-          <div>1670 - 8515</div>
+          <div class="text-[1.4rem] text-[#666] pt-[10px]">Tel. 0507-1350-8515</div>
         </div>
+        <div class="location-map py-[25px]">
+          <!-- 기본 지도 -->
+          <div id="map" class="h-[300px] w-full"></div>
+          <script>
+            var position = new naver.maps.LatLng(35.188243, 129.212457);
+            var map = new naver.maps.Map('map', {
+              center: position,
+              zoom: 16
+            });
+
+            var markerOptions = {
+              position: position.destinationPoint(0, 20),
+              map: map,
+              icon: {
+                url: 'https://navermaps.github.io/maps.js.ncp/docs/img/example/sally.png',
+                size: new naver.maps.Size(50, 52),
+                origin: new naver.maps.Point(0, 0),
+                anchor: new naver.maps.Point(25, 26)
+              }
+            };
+
+            var marker = new naver.maps.Marker(markerOptions);
+          </script>
+        </div>
+        <div class="wayto">
+          <ul class="px-[33px] text-normal">
+            <li>내비게이션</li>
+            <li>지하철</li>
+            <li>지하철</li>
+            <li>지하철</li>
+          </ul>
+        </div>
+
       </section>
       <section
         class="attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp"
