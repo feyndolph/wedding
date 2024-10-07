@@ -90,12 +90,7 @@
         </div>
     </section>
     <section class="gallery py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp"></section>
-    <div class="anibox" style="
-            animation-name: fadeInUp;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            opacity: 1;
-          ">
+    <div class="scroll_on type_bottom">
       <div class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
         GALLERY
       </div>
@@ -105,7 +100,10 @@
 
     </div>
     </section>
+
+
     <section class="location py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
+
       <div class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
         LOCATION
       </div>
@@ -170,37 +168,30 @@
       </div>
 
     </section>
-    <section class="attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp"></section>
-    <div class="anibox" style="
-            animation-name: fadeInUp;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            opacity: 1;
-          ">
-      <div class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
-        GUESTBOOK
-      </div>
-      <h3 class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]" style="-webkit-text-stroke: 0.2px;">
-        방명록
-      </h3>
-      <div class="guestbook-area m-[30px]">
-        <div class="guestbookBtn leading-[1.76] py-[30px] text-right">
-          <button
-            class="border border-[1px] border-solid border-[#eaeaea] rounded-[16px] text-[1.3rem] bg-[#fff] h-[40px] w-[100px]">
-            작성하기
-          </button>
-        </div>
-      </div>
 
-    </div>
+    <section class="scroll_wrap attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
+      <div class="scroll_on type_bottom">
+        <div
+          class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
+          GUESTBOOK
+        </div>
+        <h3 class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]" style="-webkit-text-stroke: 0.2px;">
+          방명록
+        </h3>
+        <div class="guestbook-area m-[30px]">
+          <div class="guestbookBtn leading-[1.76] py-[30px] text-right">
+            <button
+              class="border border-[1px] border-solid border-[#eaeaea] rounded-[16px] text-[1.3rem] bg-[#fff] h-[40px] w-[100px]">
+              작성하기
+            </button>
+          </div>
+        </div>
+
+      </div>
     </section>
-    <section class=" attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
-      <div class="anibox" style="
-            animation-name: fadeInUp;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-            opacity: 1;
-          ">
+
+    <section class=" attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp scroll_wrap">
+      <div class="scroll_on type_bottom">
         <div
           class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
           R.S.V.P.
@@ -228,5 +219,42 @@
     </footer>
   </div>
 </body>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function () {
+    // 클래스가 "scroll_on"인 모든 요소를 선택합니다.
+    const $counters = $(".scroll_on");
+
+    // 노출 비율(%)과 애니메이션 반복 여부(true/false)를 설정합니다.
+    const exposurePercentage = 100; // ex) 스크롤 했을 때 $counters 컨텐츠가 화면에 100% 노출되면 숫자가 올라갑니다.
+    const loop = true; // 애니메이션 반복 여부를 설정합니다. (true로 설정할 경우, 요소가 화면에서 사라질 때 다시 숨겨집니다.)
+
+    // 윈도우의 스크롤 이벤트를 모니터링합니다.
+    $(window).on('scroll', function () {
+      // 각 "scroll_on" 클래스를 가진 요소에 대해 반복합니다.
+      $counters.each(function () {
+        const $el = $(this);
+
+        // 요소의 위치 정보를 가져옵니다.
+        const rect = $el[0].getBoundingClientRect();
+        const winHeight = window.innerHeight; // 현재 브라우저 창의 높이
+        const contentHeight = rect.bottom - rect.top; // 요소의 높이
+
+        // 요소가 화면에 특정 비율만큼 노출될 때 처리합니다.
+        if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >= (contentHeight * exposurePercentage / 100)) {
+          $el.addClass('active');
+        }
+        // 요소가 화면에서 완전히 사라졌을 때 처리합니다.
+        if (loop && (rect.bottom <= 0 || rect.top >= window.innerHeight)) {
+          $el.removeClass('active');
+        }
+      });
+    }).scroll();
+  });
+
+</script>
 
 </html>
