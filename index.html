@@ -98,6 +98,133 @@
         우리의 순간
       </h3>
 
+      <div class="clearfix anibox hd visible animated fadeInUp">
+
+        <div class="gallGridWrapper multiple ratio twoRow" style="height: 366px;">
+            <div class="item" style="background-image: url(/assets/images/gallery/d49.JPEG);">
+              <img src="/assets/images/gallery/d49.JPEG" class="box rectangle">
+            </div>
+            <div class="item" style="background-image: url(/assets/images/gallery/c27.JPEG?f=webp&amp;w=500); grid-area: span 2">
+              <img src="/assets/images/gallery/c27.JPEG" class="box rectangle">
+            </div>
+            <div class="item" style="background-image: url(/assets/images/gallery/e12.JPEG); grid-area: span 2">
+              <img src="/assets/images/gallery/e12.JPEG" class="box rectangle">
+            </div>
+            <div class="item" style="background-image: url(/assets/images/gallery/b30.JPEG);">
+                <img src="/src/img/card/horizontal.png" class="box rectangle">
+            </div>
+            <div class="item" style="background-image: url(https://images.theirmood.com/resources/46097/card/ncGgF35EJm/DZTx8cfTPB.jpeg?f=webp&amp;w=500);">
+                <img src="/src/img/card/horizontal.png" class="box rectangle">
+            </div><div class="item" style="background-image: url(https://images.theirmood.com/resources/46097/card/ncGgF35EJm/t0NHtVE2VV.jpeg?f=webp&amp;w=500); grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/gM5t5FgYp0.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/ipAcO3DaVe.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/dW67KJX8DO.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/swbmR9iCNL.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/sb6Urd2WXr.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/wzNZVShU36.jpeg?f=webp&amp;w=500">
+                <img src="/src/img/card/horizontal.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/FIPf5QgWCJ-crop-1inPq.webp">
+                <img src="/src/img/card/horizontal.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/BgmP5hNgH0.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/aLEHHVbuzp-crop-6vKaz.webp">
+                <img src="/src/img/card/horizontal.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/Qv9kzl4iTu.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/G9UfkNCYkY.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/kGgaKRC8mJ.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div><div class="item" data-url="https://images.theirmood.com/resources/46097/card/ncGgF35EJm/Ue4UH5R78g.jpeg?f=webp&amp;w=500" style="grid-area: span 2">
+                <img src="/src/img/card/vertical.png" class="box rectangle">
+            </div>        
+          </div>
+
+          <div class="moreBtnWrap" style="position: relative">
+              <div class="moreBtnGradient" style="position: absolute;width: 100%;height: 100px;bottom: 100%;"></div>
+              <p class="moreBnt grdMoreBnt" onclick="gallMore(this)" style="color: #544f4f">
+                  더보기&nbsp;&nbsp;<i class="fa fa-chevron-down" style="color: #777;"></i>
+              </p>
+          </div>
+        <script>
+            let isGallOpen = false
+            const gallMore = (e) => {
+                isGallOpen = true
+                document.querySelectorAll('.gallGridWrapper [data-url]').forEach(item => {
+                    item.style.backgroundImage = `url('${item.getAttribute('data-url')}')`
+                })
+                document.querySelector('.gallGridWrapper').style.height = document.querySelector('.gallGridWrapper').scrollHeight + 'px'
+                const wrap = document.querySelector(`.moreBtnWrap`)
+                if(wrap) {
+                    wrap.style.display = 'none'
+                }
+            }
+            function setGrid() {
+                if(window.innerWidth < 425) {
+                    const wrap = document.querySelector(`.gallGridWrapper.multiple`)
+                    if(wrap) {
+                        const v = ((window.innerWidth - 40) / 2 - 8 / 2) / 20 * 10
+                        // wrap.style.gridAutoRows = `${v}px`
+                    }
+                } else {
+                    const wrap = document.querySelector(`.gallGridWrapper.multiple`)
+                    if(wrap) {
+                        wrap.style.gridAutoRows = ``
+                    }
+                }
+
+                if('multiple' === 'multiple') {
+                    let cnt = 0
+                    document.querySelectorAll(`.gallGridWrapper .item`).forEach(item => {
+                        cnt++
+                        if(item.getAttribute('data-isSpan') === 'true') {
+                            cnt++
+                        }
+                    })
+                    let isRun = false
+                    if(
+                        (2 === 2 && cnt > 6) ||
+                        (2 === 3 && cnt > 9)
+                    ) {
+                        isRun = true
+                    }
+
+                    if(isRun) {
+                        let cHeight = document.querySelector(`.gallGridWrapper .item`).clientHeight
+                        if (cHeight > 150) {
+                            cHeight = cHeight / 2 - 3
+                        }
+                        if(!isGallOpen) {
+                            document.querySelector(`.gallGridWrapper`).style.height = ((cHeight * 3) + 12) + 'px'
+                        } else {
+                            document.querySelector(`.gallGridWrapper`).style.height = ''
+                        }
+                    } else {
+                        document.querySelector(`.gallLayerWrapper .moreBtnWrap`).style.display = 'none'
+                    }
+                } else {
+                    if(!isGallOpen) {
+                        document.querySelector(`.gallGridWrapper`).style.height =
+                            (((document.querySelector(`.gallGridWrapper .item`).clientHeight) * 3) + (8 * 2.5) + 5) + 'px'
+                    } else {
+                        document.querySelector(`.gallGridWrapper`).style.height = ''
+                    }
+                }
+            }
+
+            setGrid()
+            window.addEventListener('resize', e => {
+                setGrid()
+            })
+        </script>
+      </div>
+
     </div>
     </section>
 
