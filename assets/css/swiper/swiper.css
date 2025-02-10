@@ -375,7 +375,7 @@
   text-transform: none;
   font-variant: initial;
   line-height: 1;
-  background-image: url(/src/img/number-arrow-r.png);
+  background-image: url(/assets/images/number-arrow-r.png);
   background-size: cover;
   height: 24px;
   width: 24px;
@@ -386,7 +386,7 @@
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
   content: "prev";
-  background-image: url(/src/img/number-arrow-l.png);
+  background-image: url(/assets/images/number-arrow-l.png);
 }
 
 .swiper-button-next,
