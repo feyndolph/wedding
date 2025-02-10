@@ -185,6 +185,9 @@
   height: 100%;
 }
 
+.gallGridWrapper.multiple + .moreBtnWrap .moreBtnGradient {
+  background: linear-gradient(0deg, rgba(250, 250, 250,1) 0%, rgba(250, 250, 250,0.55) 60%, rgba(250, 250, 250,0.5) 73%, rgba(250, 250, 250,0.25) 83%, rgba(250, 250, 250,0) 100%);
+}
 .bg_theme_white .gallGridWrapper.multiple + .moreBtnWrap .moreBtnGradient {
   background: linear-gradient(0deg, rgba(250, 250, 250,1) 0%, rgba(250, 250, 250,0.55) 60%, rgba(250, 250, 250,0.5) 73%, rgba(250, 250, 250,0.25) 83%, rgba(250, 250, 250,0) 100%);
 }
