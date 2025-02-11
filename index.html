@@ -23,56 +23,12 @@
   <!-- Naver Map-->
   <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8p9jw9mxt6"></script>
   <script type="text/javascript" src="./assets/js/swiper/swiper.js?t=31"></script>
+  <script type="text/javascript" src="./assets/js/moment/moment.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
-<body class="flex justify-center box-border max-w-full antialiased text-[1.2rem] bg-[#efefef] font-['Gowun_Dodum']">
-  <!---------------------------------------------
-      ::::: 줌 기능 활성화 :::::::::::::::::::::::::::
-      ---------------------------------------------->
-      <div class="zoomGallWrapper" style="">
-        <a class="close">
-            <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.86018 16.829L16.3455 8.34375" stroke="#555" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#555" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </a>
-        <div id="fullbox" class="">
-            <div class="swiper-wrapper" id="swiper-wrapper-0215e8f87383e13f" aria-live="polite">
-              <div class="swiper-slide" role="group" aria-label="1 / 19">
-                <div class="swiper-zoom-container">
-                  <img class="vs imgblk rs" src="./assets/images/gallery/d49.JPEG?f=web&amp;w=1280">
-                </div>
-              </div>
-              <div class="swiper-slide" role="group" aria-label="2 / 19">
-                <div class="swiper-zoom-container">
-                  <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG?f=webp&amp;w=1280" style="display: none;">
-                </div>
-              </div>
-              <div class="swiper-slide" role="group" aria-label="18 / 19">
-                <div class="swiper-zoom-container">
-                  <img class="vs imgblk rs" src="./assets/images/gallery/e12.JPEG??f=webp&amp;w=1280" style="display: none;">
-                </div>
-              </div>
-              <div class="swiper-slide" role="group" aria-label="19 / 19">
-                <div class="swiper-zoom-container">
-                  <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG??f=webp&amp;w=1280" style="display: none;">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-next swiper-opts" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
-            <div class="swiper-button-prev swiper-opts" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
-            <div class="swiper-pagination swiper-opts swiper-pagination-bullets-dynamic" style="width: 40px;">
-              <span class="swiper-pagination-bullet" style="left: -16px;"></span>
-              <span class="swiper-pagination-bullet" style="left: -16px;"></span>
-              <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev-prev" style="left: -16px;"></span>
-              <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev" style="left: -16px;"></span>
-              <span class="swiper-pagination-bullet swiper-pagination-bullet-active-main" aria-current="true" style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span>
-              <span class="swiper-pagination-bullet" style="left: -16px;"></span>
-              <span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span></div>
-        </div>
-      </div>
+<body class="flex justify-center box-border max-w-full antialiased text-[1.2rem] bg-[#efefef] font-['Gowun_Dodum']"> 
   <div class="main border w-[425px] bg-white text-center">
     <section
       class="intro py-[40px] px-0 m-0 transition ease-in-out duration-1000 delay-1000 animated animatedFadeInUp fadeInUp"
@@ -138,8 +94,35 @@
           </div>
         </div>
     </section>
+
+    <section class="invitation py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
+      <div class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
+        INVITATION
+      </div>
+      <h3 class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]" style="-webkit-text-stroke: 0.2px;">
+        소중한 분들을 초대합니다.
+      </h3>
+
+      <div class="introMent anibox f17 hd visible animated fadeInUp font-base px-[33px] py-[35px] leading-[2] text-[#544f4f] text-[1.4rem]">
+        <div id="intro-ment-area">
+            <p>100년 동안 당신을 모르고 사는 것보다,</p>
+            <p>당신을 알고 지금 죽는게 더 나아요.</p>
+            <p>&nbsp;</p>
+            <p>- 디즈니, &lt;포카혼타스&gt; 中 -<br>&nbsp;</p>
+            <p>-</p><p><br>평생 서로 귀하게 여기며<br>첫 마음 그대로 존중하고&nbsp;</p>
+            <p>배려하며 살겠습니다.<br><br>오로지 믿음과 사랑을 약속하는 날<br>오셔서 축복해 주시면 더 없는 기쁨으로<br>간직하겠습니다.</p>        
+        </div>
+      </div>
+
+      <div class="pb-[30px]">
+        <div class="my-0 mx-[33px] pb-[15px]">
+          <div></div>
+          <img class="max-w-full rounded-lg" src="./assets/images/gallery/b53.JPEG" alt="">
+        </div>
+      </div>
+    </section>
+
     <section class="gallery py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
-    <div class="scroll_on type_bottom">
       <div class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
         GALLERY
       </div>
@@ -489,12 +472,169 @@
               zoomGallOpen($(this).index());
           });
       </script>
-    </div>
     </section>
 
+    <section class="calendar py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
+      <div class="calwrap max-w-[90%] w-[280px] m-auto">
+        <div class="f20 caltit text-center">
+          <div class="caltit_tit text-[2rem] tracking-[1px] opacity-[0.95] text-[#544f4f]">
+              2025.04.06
+          </div>
+          <div class="caltit_add tracking-[0] opacity-[0.8] text-[1.5rem] text-[#544f4f] mt-[7px]">
+            일요일 오후 12시 30분
+          </div>
+        </div>
+
+        <div class="calendar_wrapper my-[35px] mx-0 py-[15px] px-0 border-y-[1px] border-[#eeeeee] flex justify-center">
+          <table class="calendar mt-0 mx-auto mb-[20px] w-full mb-0 border-spacing-0" id="calendar">
+            <thead>
+              <tr>
+                <th>일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+              </tr>
+            </thead>
+            <tbody>
+  
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="dday-wrap">
+        <div class="countdown ft-gowun-bold mb-[10px]">
+          <div>
+            <div class="desc">Days</div>
+            <span class="card data-days" style="width: auto;">00</span>
+          </div>
+          <div>
+            <div class="desc">&nbsp;</div>
+            <span>:</span>
+          </div>
+          <div>
+            <div class="desc">Hour</div>
+            <span class="card data-hour">00</span>
+          </div>
+          <div>
+            <div class="desc">&nbsp;</div>
+            <span>:</span>
+          </div>
+          <div>
+            <div class="desc">Min</div>
+            <span class="card data-min">00</span>
+          </div>
+          <div>
+            <div class="desc">&nbsp;</div>
+            <span>:</span>
+          </div>
+          <div>
+            <div class="desc">Sec</div>
+            <span class="card data-sec">00</span>
+          </div>
+        </div>
+        <div class="subTitle v2 f18 call-comment ft-gowun-bold">
+          <span id="call-comment"></span>
+        </div>
+      </div>
+      <script>
+        function initCalendar() {
+          var lastDate = moment('2025-04-01').locale('ko');
+          var lastDay = parseInt(lastDate.endOf('month').format('D'));
+
+          //console.log("lastDate:"+lastDate.format());
+          //console.log("lastDay:"+lastDay);
+
+          var week = new Array(0, 1, 2, 3, 4, 5, 6);
+          var marriedDate = new moment('2025-04-01').locale('ko').day();
+          var todayLabel = week[marriedDate];
+
+
+          var dday = '06';
+
+          var c = '';
+          var j = 0;
+          var r = 1;
+          var end = (lastDay+todayLabel);
+          for(var i=1;i<=end;i++) {
+              if(j==0||j%7==0) {
+                  if(j==0) {
+                      c += '<tr>';
+                  }else{
+                      c += '</tr><tr>';
+                  }
+              }
+              if(todayLabel>0) {
+                  todayLabel--;
+                  c += '<td></td>';
+              }else{
+                  if(dday==r) {
+                      c += '<td><span class="dday">'+r+'</span></td>';
+                  }else{
+                      c += '<td class="cal_tr_td_'+r+'">'+r+'</td>';
+                  }
+
+                  r++;
+              }
+
+              j++;
+          }
+          c += '</tr>';
+
+          $("#calendar tbody").html(c);
+        }
+
+        function getClock() {
+          const now = moment()
+          const wday = moment('2025-04-06 12:30:00')
+
+          const day = parseInt(moment.duration(wday.diff(now)).asDays())
+          const hours = moment.duration(wday.diff(now)).hours()
+          const minutes = moment.duration(wday.diff(now)).minutes()
+          const seconds = moment.duration(wday.diff(now)).seconds()
+
+
+          $(".countdown .data-days").text(day);
+          $(".countdown .data-hour").text(hours);
+          $(".countdown .data-min").text(minutes);
+          $(".countdown .data-sec").text(seconds);
+          if (day >= 0) {
+            $("#call-comment").text("도경, 재원의 결혼식이 " + day + "일 남았습니다.");
+          } else {
+            $("#call-comment").text("도경, 재원의 결혼식이 " + Math.abs(day) + "일 지났습니다.");
+          }
+        }
+
+        $(document).ready(function(){
+          if($("#calendar").is(":visible")) {
+            initCalendar();
+
+            $.ajax({
+                type : 'get',
+                data : {"date" : '2024-10-01'},
+                url : '/holiday',
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                success : function(data){
+                    //console.log(data);
+
+                    $(data).each(function(idx,val){
+                        //console.log(val.day);
+                        $(".cal_tr_td_"+val.day).css("color", "var(--main-sun-day-color)");
+                    });
+                }
+            });
+          }
+
+          setInterval(getClock, 1000);
+          getClock();
+        });
+      </script>
+    </section>
 
     <section class="location py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
-
       <div class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
         LOCATION
       </div>
@@ -608,6 +748,51 @@
     <footer class="py-[20px]">
       <div class="footer-info">@ 신랑이 만듦</div>
     </footer>
+  </div>
+  <!---------------------------------------------
+    ::::: 줌 기능 활성화 :::::::::::::::::::::::::::
+  ---------------------------------------------->
+  <div class="zoomGallWrapper" style="">
+    <a class="close">
+        <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.86018 16.829L16.3455 8.34375" stroke="#555" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#555" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </a>
+    <div id="fullbox" class="">
+        <div class="swiper-wrapper" id="swiper-wrapper-0215e8f87383e13f" aria-live="polite">
+          <div class="swiper-slide" role="group" aria-label="1 / 19">
+            <div class="swiper-zoom-container">
+              <img class="vs imgblk rs" src="./assets/images/gallery/d49.JPEG?f=web&amp;w=1280">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="2 / 19">
+            <div class="swiper-zoom-container">
+              <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG?f=webp&amp;w=1280" style="display: none;">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="18 / 19">
+            <div class="swiper-zoom-container">
+              <img class="vs imgblk rs" src="./assets/images/gallery/e12.JPEG??f=webp&amp;w=1280" style="display: none;">
+            </div>
+          </div>
+          <div class="swiper-slide" role="group" aria-label="19 / 19">
+            <div class="swiper-zoom-container">
+              <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG??f=webp&amp;w=1280" style="display: none;">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-opts" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
+        <div class="swiper-button-prev swiper-opts" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
+        <div class="swiper-pagination swiper-opts swiper-pagination-bullets-dynamic" style="width: 40px;">
+          <span class="swiper-pagination-bullet" style="left: -16px;"></span>
+          <span class="swiper-pagination-bullet" style="left: -16px;"></span>
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev-prev" style="left: -16px;"></span>
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev" style="left: -16px;"></span>
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-main" aria-current="true" style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span>
+          <span class="swiper-pagination-bullet" style="left: -16px;"></span>
+          <span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span></div>
+    </div>
   </div>
 </body>
 <script>

@@ -318,3 +318,75 @@
 .zoomGallWrapper .close img {
   width: 100%;
 }
+
+/* Calendar */
+.calendar th,
+.calendar td {
+  width: 14%;
+  text-align: center;
+  padding: 6px 0;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+.calendar th {
+  padding-bottom: 14px;
+}
+.calendar tr th:first-child,
+.calendar tr td:first-child {
+  color: #f79e9e;
+}
+.calendar tr th:nth-child(7),
+.calendar tr td:nth-child(7) {
+  color: #2a3954;
+}
+.calendar .dday {
+  display: inline-block;
+  background: #f79e9e;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.dday-wrap {
+  letter-spacing: -0.5px;
+  border-left: 0;
+  border-right: 0;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.dday-wrap .countdown {
+  font-family: Crimson Pro;
+  margin: 0 0 10px;
+}
+.dday-wrap .countdown > div {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.2rem !important;
+  letter-spacing: 0;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+}
+.dday-wrap .countdown .desc {
+  color: #2b2222;
+  opacity: 0.4;
+}
+.dday-wrap .countdown > div > span {
+  display: inline-block;
+  font-size: 1.6rem !important;
+  padding: 0 2.5px;
+  text-align: center;
+  line-height: 2.88rem;
+  color: #544f4f;
+}
+.dday-wrap .countdown .card {
+  color: #2b2222;
+  font-size: 2.4rem !important;
+  width: 32px;
+  border-radius: 8px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  opacity: 0.8;
+}
