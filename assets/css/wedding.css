@@ -390,3 +390,284 @@
   border-bottom-right-radius: 0;
   opacity: 0.8;
 }
+
+/* 방명록 */
+.guestbook-write-page select,
+.guestbook-write-page input {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 13px;
+}
+.guestbook-write-page input::placeholder {
+  font-weight: normal !important;
+  font-size: 13px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.guestbook-write-page input:focus {
+  outline: none;
+}
+.guestbook-write-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+  background: #fff;
+  display: none;
+  animation-duration: 0.35s !important;
+  max-width: 425px;
+  right: 0;
+  margin: auto;
+}
+.guestbook-write-page * {
+  letter-spacing: -0.5px;
+}
+.guestbook-write-page .frm {
+  position: relative;
+  height: 100%;
+  background: #fff;
+  border-radius: 0px;
+  color: #000;
+}
+.guestbook-write-page .frm .frmIn {
+  padding: 15px 25px;
+}
+.guestbook-write-page .frm .hea {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0px 25px 0px;
+  color: #000;
+  border-bottom: 1px solid #efefef;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+.guestbook-write-page .frm .hea > span {
+  position: relative;
+  top: 1px;
+  font-weight: normal;
+}
+
+.guestbook-write-page .frm .put {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  padding: 13px 10px;
+}
+.guestbook-write-page .frm .put::placeholder {
+  font-size: 14px;
+  color: #999;
+}
+.guestbook-write-page .frm div > .put:last-child {
+  float: right;
+}
+.guestbook-write-page .frm textarea.put {
+  float: none;
+  width: 100%;
+  box-sizing: border-box;
+  height: 150px;
+}
+.guestbook-write-page .tip {
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: inline-block;
+  color: #222;
+  position: relative;
+}
+.guestbook-write-page .tip .spot {
+  background: #f76767;
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+.guestbook-write-page .tip.emp {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+.guestbook-write-page .frm select.put {
+  background: #fff;
+  padding: 0 9px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px;
+  box-sizing: border-box;
+  height: 42.4px;
+  line-height: 42.4px;
+}
+
+.guestbook-write-page .att-fdver {
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  padding-left: 75px;
+}
+.guestbook-write-page .att-fdver-btn {
+  text-align: center;
+  display: block;
+  font-size: 1.6rem;
+  color: #fff;
+  background: #000;
+  height: 60px;
+  line-height: 60px;
+  box-sizing: border-box;
+}
+.guestbook-write-page .att-fdver .nm {
+  height: 60px;
+  position: absolute;
+  width: 75px;
+  text-align: left;
+  top: 0;
+  left: 0;
+}
+.guestbook-write-page .att-fdver .nm .text {
+  position: relative;
+  font-size: 12px;
+  font-weight: 600;
+  color: #222;
+  line-height: 60px;
+}
+.guestbook-write-page .att-fdver .spot {
+  background: #f76767;
+  height: 5px;
+  width: 5px;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+.guestbook-write-page .att-fdver select {
+  height: 60px;
+  border: none;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 13px;
+  width: 100%;
+  color: #222;
+  font-weight: 400;
+  background: transparent !important;
+}
+.guestbook-write-page .att-fdver input {
+  height: 60px;
+  border: none;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 13px;
+  width: 100%;
+  color: #222;
+  font-weight: 400;
+}
+.guestbook-write-page .att-fdver input::placeholder {
+  color: #aaa;
+  letter-spacing: -1px;
+  font-size: 12px !important;
+  font-weight: 200 !important;
+}
+.guestbook-write-page .att-fdver textarea {
+  height: 140px;
+  border: none;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 13px;
+  width: 100%;
+  color: #222;
+  font-weight: 400;
+  padding: 23px 0 0 0;
+}
+.guestbook-write-page .att-fdver textarea::placeholder {
+  color: #aaa;
+  letter-spacing: -1px;
+  font-size: 12px !important;
+  font-weight: 200 !important;
+}
+.guestbook-write-page .att-fdver textarea:focus {
+  outline: none;
+}
+
+.guestbook-write-page .box-chk {
+  position: absolute;
+  visibility: hidden;
+}
+.guestbook-write-page .box-chk + label {
+  text-align: center;
+  border: 1px solid #eaeaea;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #aaaaaa;
+  font-weight: 300;
+  width: calc(50% - 5px);
+  height: 40px;
+  line-height: 38px;
+  float: left;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  transition: all 0.1s ease-in-out 0s;
+}
+.guestbook-write-page .box-chk-wrap > .box-chk + label:last-child {
+  float: right;
+}
+.guestbook-write-page .box-chk:checked + label.v01_pink {
+  background: #f76868;
+  color: #fff;
+}
+.guestbook-write-page .box-chk:checked + label.v01_blue {
+  background: #689ef7;
+  color: #fff;
+}
+.guestbook-write-page .box-chk:checked + label.v01_black {
+  background: #333;
+  color: #fff;
+}
+.guestbook-write-page .box-chk:checked + label.v01_gray {
+  background: transparent;
+  font-weight: 500;
+  color: #222;
+  border-color: #222;
+}
+.guestbook-write-page .box-chk:checked + label.v02_pink {
+  border-color: #f76868;
+  color: #f76868;
+  font-weight: 500;
+}
+.guestbook-write-page .box-chk:checked + label.v02_blue {
+  border-color: #689ef7;
+  color: #689ef7;
+  font-weight: 500;
+}
+
+.guestbook-write-page .att-priv-box {
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  padding: 15px 17px;
+  margin-top: 30px;
+}
+.guestbook-write-page .att-priv-box p {
+  font-size: 12px;
+  letter-spacing: -1.2px;
+  color: #aaa;
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+.guestbook-write-page .att-fdver input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.clse {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  color: #bbb;
+  cursor: pointer;
+}

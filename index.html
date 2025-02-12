@@ -471,6 +471,11 @@
           $(".gallGridWrapper .item").click(function(){
               zoomGallOpen($(this).index());
           });
+
+          $("#books-write-open").click(function(){
+              $("#books-write").css("display", "block");
+              $("#books-write-open").css("display", "none");
+          });
       </script>
     </section>
 
@@ -700,6 +705,36 @@
 
     </section>
 
+    <div id="gustbk_op" class="guestbook-write-page wpopclass anibox_attend" style="display: none;">
+      <form method="post" autocomplete="off">
+          <input type="hidden" name="_token" value="xx5aPhAgFJxZ03Qb4Lvcbad0oWIhL4grmQz6S4dk">
+          <div class="frm">
+              <div class="frmIn">
+                  <a class="clse" style="top: 11px; right: 25px; font-size: 26px; width: 30px; height: 30px;">
+                    <img style="width: 100%; height: 100%;" src="./assets/images/close.svg" id="exifviewer-img-2" exifid="1356656879" oldsrc="https://w.theirmood.com/src/img/close.svg">
+                  </a>
+                  <div class="hea">방명록 (축하 글)작성</div>
+                  <div class="att-fdver">
+                      <span class="nm"><span class="text">이름<b class="spot"></b></span></span>
+                      <input type="text" placeholder="이름을 입력해 주세요." name="name" maxlength="30" autocomplete="off">
+                  </div>
+                  <div class="att-fdver">
+                      <span class="nm"><span class="text">비밀번호<b class="spot"></b></span></span>
+                      <input type="password" placeholder="비밀번호를 입력해 주세요." name="password" maxlength="30" autocomplete="off">
+                  </div>
+                  <div class="att-fdver">
+                      <span class="nm"><span class="text">내용<b class="spot"></b></span></span>
+                      <textarea type="text" placeholder="내용을 작성해 주세요. (최대 500자)" name="note" maxlength="500" autocomplete="off"></textarea>
+                  </div>
+                  <div style="margin-top: 40px;">
+                      <a class="att-fdver-btn"><span class="font-base">신랑 &amp; 신부에게 </span><b>축하 글 전달하기</b></a>
+                  </div>
+                  <div style="height: 70px;"></div>
+              </div>
+          </div>
+      </form>
+    </div>
+
     <section class="scroll_wrap attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
       <div class="scroll_on type_bottom">
         <div
@@ -712,13 +747,77 @@
         <div class="guestbook-area m-[30px]">
           <div class="guestbookBtn leading-[1.76] py-[30px] text-right">
             <button
-              class="border border-[1px] border-solid border-[#eaeaea] rounded-[16px] text-[1.3rem] bg-[#fff] h-[40px] w-[100px]">
+              id="books-write-open"
+              class="border border-[1px] border-solid border-[#eaeaea] rounded-[16px] text-[1.3rem] bg-[#fff] h-[40px] w-[100px] books-w">
               작성하기
             </button>
           </div>
         </div>
 
       </div>
+      <script>
+        $(document).ready(function() {
+          gubook_write_sctop = 0;
+
+          // 방명록 전체보기 팝업 열기
+          $(".books-all > a.a, #books-all-open").click(function(){ gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%"); $("html,body").css("overflow-y", "hidden"); $("#gustbk_list").css("display", "block"); });
+          // 방명록 작성 팝업 열기
+          $("#books-write-open, .books-all > a.w").click(function(){ 
+            gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%"); 
+            $("html,body").css("overflow-y", "hidden"); 
+            $("#gustbk_op").css("display", "block"); 
+          });
+          // 팝업 닫기
+          $("#gustbk_list .clse, #gustbk_op .clse").click(function(){ $("html,body").css("height", "auto"); $("html,body").css("overflow-y", "visible");$("html, body").animate({scrollTop: gubook_write_sctop},10);$(this).parents(".wpopclass").css("display", "none"); });
+          // 방명록 삭제 버튼 클릭
+          $(".books-swiper .swiper-slide .close").click(function(){ deBooks(this); });
+          var isBooksWriteLoading = false;
+
+          // 방명록 작성하기 버튼 클릭
+          $("#gustbk_op .att-fdver-btn").click(function(){
+
+              var data = $("#gustbk_op form").serializeObject();
+              if(!check.isNotNull(data.name)) {alert("이름을 입력해주세요.");return;}
+              if(!check.isNotNull(data.password)) {alert("비밀번호를 입력해주세요.");return;}
+              if(!check.isNotNull(data.note)) {alert("방명록 내용을 입력해주세요.");return;}
+
+              data.name = data.name.trim();
+              if(data.name.length<1) {
+                  alert("이름은 1글자 이상 입력해주세요."); return;
+              }
+
+              data.password = data.password.trim();
+              if(data.password.length<4) {
+                  alert("비밀번호는 4글자 이상 입력해주세요."); return;
+              }
+
+              if(!isBooksWriteLoading) {
+                  isBooksWriteLoading = true;
+                  loading(true);
+                  $.ajax({
+                      type : 'post',
+                      //dataType : "text",
+                      //contentType : "application/json; charset=utf-8",
+                      data : data,
+                      //async : false,
+                      url : '/card-books/ncGgF35EJm',
+                      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                      success : function(data){
+                          loading(false);
+                          location.reload();
+                      },
+                      error : function(err) {
+                          loading(false);
+                          isBooksWriteLoading = false;
+                          console.log(err);
+                          alert("등록 중에 문제가 발생했습니다.\r\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
+                      }
+                  });
+              }
+
+          });
+        });
+      </script>
     </section>
 
     <section class=" attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp scroll_wrap">
