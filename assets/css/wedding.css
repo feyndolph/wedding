@@ -513,7 +513,7 @@
 .guestbook-write-page .att-fdver-btn {
   text-align: center;
   display: block;
-  font-size: 1.6rem;
+  font-size: 14px;
   color: #fff;
   background: #000;
   height: 60px;
@@ -670,4 +670,149 @@
   font-size: 2rem;
   color: #bbb;
   cursor: pointer;
+}
+
+/* 마음 전하실 곳 */
+.txtnone {
+  text-indent: -9999px;
+  left: -9999px;
+  position: absolute;
+}
+.accst02 {
+  padding: 30px 0px 0px 0px;
+}
+.accst02 .pack_wrap {
+  width: 290px;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 1px 2px 3px 0 #ccc;
+  margin-bottom: 20px;
+}
+.accst02 .pack {
+  display: block;
+  font-size: 1.7rem;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  background: rgb(241, 243, 248);
+  box-sizing: border-box;
+  padding: 0px 20px;
+  position: relative;
+  color: #444;
+  border-radius: 6px 6px 6px 6px;
+}
+.ft-myeongjo .accst02 .pack {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.ft-notosans .accst02 .pack {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.accst02 .pack > i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 15px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  height: 18px;
+  color: #666;
+  transition: all 0.3s ease;
+}
+.accst02 .pack_wrap .c {
+  /* background: #fff; */
+  border-radius: 0px 0px 6px 6px;
+  font-family: "Noto Sans KR", sans-serif;
+
+  /* height: 0px; */
+  overflow: hidden;
+
+  /* -moz-transition: height 0.5s ease;
+  -webkit-transition: height 0.5s ease;
+  -o-transition: height 0.5s ease;
+  transition: height 0.5s ease; */
+}
+.accst02 .pack_wrap.active .pack i {
+  transform: rotate(180deg);
+}
+.accst02 .pack_wrap.active .c {
+  /* height: fit-content; */
+}
+/* .accst02 .pack_wrap.active .c.cnt1 {height: 73px;}
+.accst02 .pack_wrap.active .c.cnt2 {height: 147px;}
+.accst02 .pack_wrap.active .c.cnt3 {height: 221px;} */
+
+.accst02 .pack_wrap .c > li {
+  font-size: 1.4rem;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 10px 12px 10px 12px;
+  color: #333;
+  line-height: 24px;
+  border-top: 1px solid #eee;
+  transition: opacity 0.5s ease;
+}
+.accst02 .pack_wrap .c > li:nth-child(1) {
+  border-top: 0px;
+}
+.accst02 .pack_wrap .c > li .name {
+  display: inline-block;
+  margin-top: 5px;
+}
+.accst02 .pack_wrap .c > li .b_1 {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  width: 60px;
+  background: rgb(241, 243, 248);
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  height: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.accst02 .pack_wrap .c > li .b_2 {
+  position: absolute;
+  right: 12px;
+  top: 39px;
+  width: 60px;
+  text-align: center;
+  font-family: "Noto Sans KR", sans-serif;
+  height: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  background-image: url("/src/img/payment_icon_yellow_small.png");
+  background-position: center;
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  background-color: rgb(255, 235, 0);
+  border-radius: 3px;
+}
+
+.pack_wrap .accordion-list {
+  max-height: 0;
+  overflow: hidden;
+  /* opacity: 0; */
+  height: fit-content;
+  transition: max-height 0.5s ease-out;
+  /* transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);  */
+}
+.pack_wrap .pack {
+  cursor: pointer;
+}
+.pack_wrap.active .accordion-list {
+  max-height: 500px; /* 충분히 큰 값으로 설정 */
+  /* opacity: 1; */
+}
+
+.guckhwa {
+  height: 18px;
+  vertical-align: sub;
 }

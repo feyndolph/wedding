@@ -25,10 +25,10 @@
   <script type="text/javascript" src="./assets/js/swiper/swiper.js?t=31"></script>
   <script type="text/javascript" src="./assets/js/moment/moment.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
-<body class="flex justify-center box-border max-w-full antialiased text-[1.2rem] bg-[#efefef] font-['Gowun_Dodum']"> 
+<body class="flex justify-center box-border max-w-full antialiased text-[1.2rem] bg-[#efefef] font-['Gowun_Dodum']">
   <div class="main border w-[425px] bg-white text-center">
     <section
       class="intro py-[40px] px-0 m-0 transition ease-in-out duration-1000 delay-1000 animated animatedFadeInUp fadeInUp"
@@ -103,14 +103,16 @@
         소중한 분들을 초대합니다.
       </h3>
 
-      <div class="introMent anibox f17 hd visible animated fadeInUp font-base px-[33px] py-[35px] leading-[2] text-[#544f4f] text-[1.4rem]">
+      <div
+        class="introMent anibox f17 hd visible animated fadeInUp font-base px-[33px] py-[35px] leading-[2] text-[#544f4f] text-[1.4rem]">
         <div id="intro-ment-area">
-            <p>100년 동안 당신을 모르고 사는 것보다,</p>
-            <p>당신을 알고 지금 죽는게 더 나아요.</p>
-            <p>&nbsp;</p>
-            <p>- 디즈니, &lt;포카혼타스&gt; 中 -<br>&nbsp;</p>
-            <p>-</p><p><br>평생 서로 귀하게 여기며<br>첫 마음 그대로 존중하고&nbsp;</p>
-            <p>배려하며 살겠습니다.<br><br>오로지 믿음과 사랑을 약속하는 날<br>오셔서 축복해 주시면 더 없는 기쁨으로<br>간직하겠습니다.</p>        
+          <p>100년 동안 당신을 모르고 사는 것보다,</p>
+          <p>당신을 알고 지금 죽는게 더 나아요.</p>
+          <p>&nbsp;</p>
+          <p>- 디즈니, &lt;포카혼타스&gt; 中 -<br>&nbsp;</p>
+          <p>-</p>
+          <p><br>평생 서로 귀하게 여기며<br>첫 마음 그대로 존중하고&nbsp;</p>
+          <p>배려하며 살겠습니다.<br><br>오로지 믿음과 사랑을 약속하는 날<br>오셔서 축복해 주시면 더 없는 기쁨으로<br>간직하겠습니다.</p>
         </div>
       </div>
 
@@ -134,20 +136,21 @@
           <div class="item" style="background-image: url(./assets/images/gallery/d49.JPEG);">
             <img src="./assets/images/gallery/d49.JPEG" class="box rectangle">
           </div>
-          <div class="item" style="background-image: url(./assets/images/gallery/c27.JPEG?f=webp&amp;w=500); grid-area: span 2">
+          <div class="item"
+            style="background-image: url(./assets/images/gallery/c27.JPEG?f=webp&amp;w=500); grid-area: span 2">
             <img src="./assets/images/gallery/c27.JPEG" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/e12.JPEG); grid-area: span 2">
             <img src="/assets/images/gallery/e12.JPEG" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/b30.JPEG);">
-              <img src="/src/img/card/horizontal.png" class="box rectangle">
+            <img src="/src/img/card/horizontal.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/f64.JPEG);">
-              <img src="/src/img/card/horizontal.png" class="box rectangle">
+            <img src="/src/img/card/horizontal.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/b9.JPEG); grid-area: span 2">
-              <img src="/src/img/card/vertical.png" class="box rectangle">
+            <img src="/src/img/card/vertical.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/f70.JPEG); grid-area: span 2">
             <img src="/src/img/card/vertical.png" class="box rectangle">
@@ -157,325 +160,325 @@
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/d4.JPEG); grid-area: span 2">
             <img src="/src/img/card/vertical.png" class="box rectangle">
-          </div>            
+          </div>
         </div>
 
-          <div class="moreBtnWrap" style="position: relative">
-              <div class="moreBtnGradient" style="position: absolute;width: 100%;height: 100px;bottom: 100%;"></div>
-              <p class="moreBnt grdMoreBnt" onclick="gallMore(this)" style="color: #544f4f">
-                  더보기&nbsp;&nbsp;<i class="fa fa-chevron-down" style="color: #777;"></i>
-              </p>
-          </div>
+        <div class="moreBtnWrap" style="position: relative">
+          <div class="moreBtnGradient" style="position: absolute;width: 100%;height: 100px;bottom: 100%;"></div>
+          <p class="moreBnt grdMoreBnt" onclick="gallMore(this)" style="color: #544f4f">
+            더보기&nbsp;&nbsp;<i class="fa fa-chevron-down" style="color: #777;"></i>
+          </p>
+        </div>
         <script>
-            let isGallOpen = false
-            const gallMore = (e) => {
-                isGallOpen = true
-                document.querySelectorAll('.gallGridWrapper [data-url]').forEach(item => {
-                    item.style.backgroundImage = `url('${item.getAttribute('data-url')}')`
-                })
-                document.querySelector('.gallGridWrapper').style.height = document.querySelector('.gallGridWrapper').scrollHeight + 'px'
-                const wrap = document.querySelector(`.moreBtnWrap`)
-                if(wrap) {
-                    wrap.style.display = 'none'
-                }
-            }
-            function setGrid() {
-                if(window.innerWidth < 425) {
-                    const wrap = document.querySelector(`.gallGridWrapper.multiple`)
-                    if(wrap) {
-                        const v = ((window.innerWidth - 40) / 2 - 8 / 2) / 20 * 10
-                        // wrap.style.gridAutoRows = `${v}px`
-                    }
-                } else {
-                    const wrap = document.querySelector(`.gallGridWrapper.multiple`)
-                    if(wrap) {
-                        wrap.style.gridAutoRows = ``
-                    }
-                }
-
-                if('multiple' === 'multiple') {
-                    let cnt = 0
-                    document.querySelectorAll(`.gallGridWrapper .item`).forEach(item => {
-                        cnt++
-                        if(item.getAttribute('data-isSpan') === 'true') {
-                            cnt++
-                        }
-                    })
-                    let isRun = false
-                    if(
-                        (2 === 2 && cnt > 6) ||
-                        (2 === 3 && cnt > 9)
-                    ) {
-                        isRun = true
-                    }
-
-                    if(isRun) {
-                        let cHeight = document.querySelector(`.gallGridWrapper .item`).clientHeight
-                        if (cHeight > 150) {
-                            cHeight = cHeight / 2 - 3
-                        }
-                        if(!isGallOpen) {
-                            document.querySelector(`.gallGridWrapper`).style.height = ((cHeight * 3) + 12) + 'px'
-                        } else {
-                            document.querySelector(`.gallGridWrapper`).style.height = ''
-                        }
-                    } else {
-                        document.querySelector(`.gallLayerWrapper .moreBtnWrap`).style.display = 'none'
-                    }
-                } else {
-                    if(!isGallOpen) {
-                        document.querySelector(`.gallGridWrapper`).style.height =
-                            (((document.querySelector(`.gallGridWrapper .item`).clientHeight) * 3) + (8 * 2.5) + 5) + 'px'
-                    } else {
-                        document.querySelector(`.gallGridWrapper`).style.height = ''
-                    }
-                }
-            }
-
-            setGrid()
-            window.addEventListener('resize', e => {
-                setGrid()
+          let isGallOpen = false
+          const gallMore = (e) => {
+            isGallOpen = true
+            document.querySelectorAll('.gallGridWrapper [data-url]').forEach(item => {
+              item.style.backgroundImage = `url('${item.getAttribute('data-url')}')`
             })
+            document.querySelector('.gallGridWrapper').style.height = document.querySelector('.gallGridWrapper').scrollHeight + 'px'
+            const wrap = document.querySelector(`.moreBtnWrap`)
+            if (wrap) {
+              wrap.style.display = 'none'
+            }
+          }
+          function setGrid() {
+            if (window.innerWidth < 425) {
+              const wrap = document.querySelector(`.gallGridWrapper.multiple`)
+              if (wrap) {
+                const v = ((window.innerWidth - 40) / 2 - 8 / 2) / 20 * 10
+                // wrap.style.gridAutoRows = `${v}px`
+              }
+            } else {
+              const wrap = document.querySelector(`.gallGridWrapper.multiple`)
+              if (wrap) {
+                wrap.style.gridAutoRows = ``
+              }
+            }
+
+            if ('multiple' === 'multiple') {
+              let cnt = 0
+              document.querySelectorAll(`.gallGridWrapper .item`).forEach(item => {
+                cnt++
+                if (item.getAttribute('data-isSpan') === 'true') {
+                  cnt++
+                }
+              })
+              let isRun = false
+              if (
+                (2 === 2 && cnt > 6) ||
+                (2 === 3 && cnt > 9)
+              ) {
+                isRun = true
+              }
+
+              if (isRun) {
+                let cHeight = document.querySelector(`.gallGridWrapper .item`).clientHeight
+                if (cHeight > 150) {
+                  cHeight = cHeight / 2 - 3
+                }
+                if (!isGallOpen) {
+                  document.querySelector(`.gallGridWrapper`).style.height = ((cHeight * 3) + 12) + 'px'
+                } else {
+                  document.querySelector(`.gallGridWrapper`).style.height = ''
+                }
+              } else {
+                document.querySelector(`.gallLayerWrapper .moreBtnWrap`).style.display = 'none'
+              }
+            } else {
+              if (!isGallOpen) {
+                document.querySelector(`.gallGridWrapper`).style.height =
+                  (((document.querySelector(`.gallGridWrapper .item`).clientHeight) * 3) + (8 * 2.5) + 5) + 'px'
+              } else {
+                document.querySelector(`.gallGridWrapper`).style.height = ''
+              }
+            }
+          }
+
+          setGrid()
+          window.addEventListener('resize', e => {
+            setGrid()
+          })
         </script>
       </div>
-      
+
       <style>
         .not-prevent-zoom {
-            -ms-user-select: none;
-            -moz-user-select: -moz-none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            user-select: none;
-            touch-action: pan-y;
+          -ms-user-select: none;
+          -moz-user-select: -moz-none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          user-select: none;
+          touch-action: pan-y;
         }
       </style>
       <script>
         var fullboxSwiper = null;
         var g_posY = 0;
-        window.addEventListener('popstate', function(event) {
-            if($(".zoomGallWrapper").is(":visible")) {
-                zoomGallClose();
-            }
+        window.addEventListener('popstate', function (event) {
+          if ($(".zoomGallWrapper").is(":visible")) {
+            zoomGallClose();
+          }
         });
         function zoomGallClose() {
-        
-            $(".zoomGallWrapper").css("display", "");
-        
-            $("html,body").css("overflow", "visible");
-            $(window).scrollTop(g_posY);
-        
-            if(fullboxSwiper != null) {
-                fullboxSwiper.destroy(true, true)
-                fullboxSwiper = null
-            }
-        
-                document.querySelector(`body`).classList.remove('not-prevent-zoom')
-            document.querySelector(`meta[name='viewport']`).setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes')
-            document.querySelector(`meta[name='HandheldFriendly'][content='true']`)?.remove()
-            
-            
-        }
-        function zoomGallOpen(imgNumb) {
-        
-            history.pushState(null, null, "#");
-        
-            g_posY = $(window).scrollTop();
-            $(".zoomGallWrapper").css("display", "block");
-            console.log(imgNumb)
-            if(fullboxSwiper==null){
-              fullboxSwiper = new Swiper("#fullbox", {
-                pagination: {
-                  el: "#fullbox .swiper-pagination",
-                  dynamicBullets: true,
-                },
-                navigation: {
-                    nextEl: "#fullbox .swiper-button-next",
-                    prevEl: "#fullbox .swiper-button-prev",
-                },
-                observer: true,
-                observeParents: true,
-                loop: true,
-                on: {
-                  slideChange : function() {
-                      const popImgList = document.querySelectorAll(`#fullbox [data-swiper-slide-index] img`)
-                      popImgList.forEach((item, index) => {
-                          const p = item.parentElement.parentElement
-                          if (
-                              p.classList.contains('swiper-slide-prev') ||
-                              p.classList.contains('swiper-slide-next') ||
-                              p.classList.contains('swiper-slide-active')
-                          ) {
-                              item.style.display = ''
-                          } else {
-                              item.style.display = 'none'
-                          }
-                      })
-                  }
-                }
-              });
-              $(".zoomGallWrapper .close").click(zoomGallClose);
-            }
-            if(imgNumb) {
-                let cnt = 0
-                while(fullboxSwiper.slideTo(parseInt(imgNumb), 100)) {
-                    if(cnt > 3) {
-                        break
-                    }
-                    cnt++
-                }
-            }
-                document.querySelector(`body`).classList.add('not-prevent-zoom')
-                document.querySelector(`meta[name='viewport']`).setAttribute('content', 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
-                const handheld = document.createElement(`meta`)
-                handheld.setAttribute('content', 'true')
-                handheld.setAttribute('name', 'HandheldFriendly')
-                document.querySelector(`head`).appendChild(handheld)        
-            }
 
-            function swipeGallery01() {
-                var imglen= $("#swipelistid > .swiper-slide").length;
-                //console.log('이미지 갯수: '+imglen);
-                if(imglen>1) {
-                    const imgList = document.querySelectorAll(`#swipelistid [data-order] img`)
-                    new Swiper(".mySwiper", {
-                        loop: true,
-                        autoHeight: true,
-                        speed: 300,
-                        //centeredSlides: true,
-                        pagination: {
-                            el: ".mySwiper .swiper-pagination",
-                            dynamicBullets: true,
-                        },
-                        navigation: {
-                            nextEl: ".mySwiper .swiper-button-next",
-                            prevEl: ".mySwiper .swiper-button-prev",
-                        },
-                        on: {
-                            slideChange : function() {
-                                imgList.forEach((item, index) => {
-                                    const p = item.parentElement
-                                    if (
-                                        p.classList.contains('swiper-slide-prev') ||
-                                        p.classList.contains('swiper-slide-next') ||
-                                        p.classList.contains('swiper-slide-active')
-                                    ) {
-                                        item.style.display = ''
-                                    } else {
-                                        item.style.display = 'none'
-                                    }
-                                })
+          $(".zoomGallWrapper").css("display", "");
 
+          $("html,body").css("overflow", "visible");
+          $(window).scrollTop(g_posY);
 
-                                var numb = this.activeIndex;
-                                var s = $("#swipelistid .swiper-slide").eq(numb).find("img.imgblk.rs").attr('src');
-                                //console.log(s);
-                                if(typeof s == "undefined" || s == null || s == "") { return; } // 이미 변환된 이미지
-                                var bs = s.replace(/\/([^/]+)-[^.]+\.(jpg|png|jpeg|webp|JPG)/, "/$1-resize.$2");
-                                bs = bs.replaceAll('-crop', '')
-
-                                //console.log(bs);
-                                $("#swipelistid .swiper-slide:nth-child("+(numb+1)+") img.imgblk").removeClass("rs");
-                                if(bs == s) { return; } // 같은 이미지
-                                $("#swipelistid .swiper-slide:nth-child("+(numb+1)+") img.imgblk").attr('src', bs);
-                            }
-                        }
-                    });
-
-                }else if(imglen==1){
-                    $(".gallHeightAdj").css("height", "75px");
-                    $(".swiper-opts").detach();
-                }else if(imglen==0) {
-                    $(".pic_0_del").detach();
-                    $(".swiper-opts").detach();
-                    //$(".pic_0_ins.line").css("display","block");
-                    //$(".pic_0_ins.line").css("width","200px");
-                    $(".layer01 .title2").css("padding-top", "0px");
-                }
-                    $("#swipelistid .swiper-slide").click(function(){
-                    zoomGallOpen($(this).attr("data-order"));
-                });
-                
-            }
-
-            function swipeGallery02() {
-              var imglen= $("#thumblistid > .swiper-slide").length;
-              //console.log('이미지 갯수: '+imglen);
-
-
-
-              if(imglen>1) {
-                  var swiper = new Swiper(".mySwiper", {
-                      loop: true,
-                      autoHeight: true,
-                      speed: 300,
-                      //effect: "cude",
-                      pagination: {
-                          el: ".swiper-pagination",
-                          clickable: true,
-                          renderBullet: function (index, className) {
-
-                              index = index + 1;
-                              //if(index > 15)
-                              console.log()
-                              var src = $("#thumblistid .ss:nth-child("+(index)+") > .vs").attr("src");
-                              const cropUrl = $("#thumblistid .ss:nth-child("+(index)+") > .vs").attr("data-cropData");
-                              if(cropUrl) {
-                                  src = cropUrl
-                              }
-
-                              //console.log((index)+" : "+src);
-                              //console.log($("#thumblistid .ss:nth-child("+(index)+") > .vs"));
-                              return '<span class="item ' + className + '" style="background-image: url('+src.replace('1280', '300')+') !important;"></span>';
-                          },
-                      },
-                      navigation: {
-                          nextEl: ".swiper-button-next",
-                          prevEl: ".swiper-button-prev",
-                      },
-                      on: {
-                          slideChange : function() {
-                              var numb = this.activeIndex;
-                              var s = $("#thumblistid .swiper-slide").eq(numb).find("img.imgblk.rs").attr('src');
-                              //console.log(s);
-                              if(typeof s == "undefined" || s == null || s == "") { return; } // 이미 변환된 이미지
-                              var bs = s.replace(/\/([^/]+)-[^.]+\.(jpg|png|jpeg|webp|JPG)/, "/$1-resize.$2");
-                              bs = bs.replaceAll('-crop', '')
-
-
-                              //console.log(bs);
-                              $("#thumblistid .swiper-slide:nth-child("+(numb+1)+") img.imgblk").removeClass("rs");
-                              if(bs == s) { return; } // 같은 이미지
-                              $("#thumblistid .swiper-slide:nth-child("+(numb+1)+") img.imgblk").attr('src', bs);
-                          },
-                          slideChangeTransitionStart: function() {
-                              this.update()
-                          }
-                      }
-                  });
-                          $("#thumblistid .swiper-slide").click(function(){
-                      zoomGallOpen($(this).attr("data-order"));
-                  });
-                  
-              }else if(imglen==1){
-                  //$(".gallHeightAdj").css("height", "75px");
-                  $(".swiper-opts").detach();
-              }else if(imglen==0) {
-                  $(".pic_0_del").detach();
-                  $(".swiper-opts").detach();
-                  //$(".pic_0_ins.line").css("display","block");
-                  //$(".pic_0_ins.line").css("width","200px");
-                  $(".layer01 .title2").css("padding-top", "0px");
-              }
+          if (fullboxSwiper != null) {
+            fullboxSwiper.destroy(true, true)
+            fullboxSwiper = null
           }
 
-          $(".gallGridWrapper .item").click(function(){
-              zoomGallOpen($(this).index());
+          document.querySelector(`body`).classList.remove('not-prevent-zoom')
+          document.querySelector(`meta[name='viewport']`).setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes')
+          document.querySelector(`meta[name='HandheldFriendly'][content='true']`)?.remove()
+
+
+        }
+        function zoomGallOpen(imgNumb) {
+
+          history.pushState(null, null, "#");
+
+          g_posY = $(window).scrollTop();
+          $(".zoomGallWrapper").css("display", "block");
+          console.log(imgNumb)
+          if (fullboxSwiper == null) {
+            fullboxSwiper = new Swiper("#fullbox", {
+              pagination: {
+                el: "#fullbox .swiper-pagination",
+                dynamicBullets: true,
+              },
+              navigation: {
+                nextEl: "#fullbox .swiper-button-next",
+                prevEl: "#fullbox .swiper-button-prev",
+              },
+              observer: true,
+              observeParents: true,
+              loop: true,
+              on: {
+                slideChange: function () {
+                  const popImgList = document.querySelectorAll(`#fullbox [data-swiper-slide-index] img`)
+                  popImgList.forEach((item, index) => {
+                    const p = item.parentElement.parentElement
+                    if (
+                      p.classList.contains('swiper-slide-prev') ||
+                      p.classList.contains('swiper-slide-next') ||
+                      p.classList.contains('swiper-slide-active')
+                    ) {
+                      item.style.display = ''
+                    } else {
+                      item.style.display = 'none'
+                    }
+                  })
+                }
+              }
+            });
+            $(".zoomGallWrapper .close").click(zoomGallClose);
+          }
+          if (imgNumb) {
+            let cnt = 0
+            while (fullboxSwiper.slideTo(parseInt(imgNumb), 100)) {
+              if (cnt > 3) {
+                break
+              }
+              cnt++
+            }
+          }
+          document.querySelector(`body`).classList.add('not-prevent-zoom')
+          document.querySelector(`meta[name='viewport']`).setAttribute('content', 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+          const handheld = document.createElement(`meta`)
+          handheld.setAttribute('content', 'true')
+          handheld.setAttribute('name', 'HandheldFriendly')
+          document.querySelector(`head`).appendChild(handheld)
+        }
+
+        function swipeGallery01() {
+          var imglen = $("#swipelistid > .swiper-slide").length;
+          //console.log('이미지 갯수: '+imglen);
+          if (imglen > 1) {
+            const imgList = document.querySelectorAll(`#swipelistid [data-order] img`)
+            new Swiper(".mySwiper", {
+              loop: true,
+              autoHeight: true,
+              speed: 300,
+              //centeredSlides: true,
+              pagination: {
+                el: ".mySwiper .swiper-pagination",
+                dynamicBullets: true,
+              },
+              navigation: {
+                nextEl: ".mySwiper .swiper-button-next",
+                prevEl: ".mySwiper .swiper-button-prev",
+              },
+              on: {
+                slideChange: function () {
+                  imgList.forEach((item, index) => {
+                    const p = item.parentElement
+                    if (
+                      p.classList.contains('swiper-slide-prev') ||
+                      p.classList.contains('swiper-slide-next') ||
+                      p.classList.contains('swiper-slide-active')
+                    ) {
+                      item.style.display = ''
+                    } else {
+                      item.style.display = 'none'
+                    }
+                  })
+
+
+                  var numb = this.activeIndex;
+                  var s = $("#swipelistid .swiper-slide").eq(numb).find("img.imgblk.rs").attr('src');
+                  //console.log(s);
+                  if (typeof s == "undefined" || s == null || s == "") { return; } // 이미 변환된 이미지
+                  var bs = s.replace(/\/([^/]+)-[^.]+\.(jpg|png|jpeg|webp|JPG)/, "/$1-resize.$2");
+                  bs = bs.replaceAll('-crop', '')
+
+                  //console.log(bs);
+                  $("#swipelistid .swiper-slide:nth-child(" + (numb + 1) + ") img.imgblk").removeClass("rs");
+                  if (bs == s) { return; } // 같은 이미지
+                  $("#swipelistid .swiper-slide:nth-child(" + (numb + 1) + ") img.imgblk").attr('src', bs);
+                }
+              }
+            });
+
+          } else if (imglen == 1) {
+            $(".gallHeightAdj").css("height", "75px");
+            $(".swiper-opts").detach();
+          } else if (imglen == 0) {
+            $(".pic_0_del").detach();
+            $(".swiper-opts").detach();
+            //$(".pic_0_ins.line").css("display","block");
+            //$(".pic_0_ins.line").css("width","200px");
+            $(".layer01 .title2").css("padding-top", "0px");
+          }
+          $("#swipelistid .swiper-slide").click(function () {
+            zoomGallOpen($(this).attr("data-order"));
           });
 
-          $("#books-write-open").click(function(){
-              $("#books-write").css("display", "block");
-              $("#books-write-open").css("display", "none");
-          });
+        }
+
+        function swipeGallery02() {
+          var imglen = $("#thumblistid > .swiper-slide").length;
+          //console.log('이미지 갯수: '+imglen);
+
+
+
+          if (imglen > 1) {
+            var swiper = new Swiper(".mySwiper", {
+              loop: true,
+              autoHeight: true,
+              speed: 300,
+              //effect: "cude",
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+
+                  index = index + 1;
+                  //if(index > 15)
+                  console.log()
+                  var src = $("#thumblistid .ss:nth-child(" + (index) + ") > .vs").attr("src");
+                  const cropUrl = $("#thumblistid .ss:nth-child(" + (index) + ") > .vs").attr("data-cropData");
+                  if (cropUrl) {
+                    src = cropUrl
+                  }
+
+                  //console.log((index)+" : "+src);
+                  //console.log($("#thumblistid .ss:nth-child("+(index)+") > .vs"));
+                  return '<span class="item ' + className + '" style="background-image: url(' + src.replace('1280', '300') + ') !important;"></span>';
+                },
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              on: {
+                slideChange: function () {
+                  var numb = this.activeIndex;
+                  var s = $("#thumblistid .swiper-slide").eq(numb).find("img.imgblk.rs").attr('src');
+                  //console.log(s);
+                  if (typeof s == "undefined" || s == null || s == "") { return; } // 이미 변환된 이미지
+                  var bs = s.replace(/\/([^/]+)-[^.]+\.(jpg|png|jpeg|webp|JPG)/, "/$1-resize.$2");
+                  bs = bs.replaceAll('-crop', '')
+
+
+                  //console.log(bs);
+                  $("#thumblistid .swiper-slide:nth-child(" + (numb + 1) + ") img.imgblk").removeClass("rs");
+                  if (bs == s) { return; } // 같은 이미지
+                  $("#thumblistid .swiper-slide:nth-child(" + (numb + 1) + ") img.imgblk").attr('src', bs);
+                },
+                slideChangeTransitionStart: function () {
+                  this.update()
+                }
+              }
+            });
+            $("#thumblistid .swiper-slide").click(function () {
+              zoomGallOpen($(this).attr("data-order"));
+            });
+
+          } else if (imglen == 1) {
+            //$(".gallHeightAdj").css("height", "75px");
+            $(".swiper-opts").detach();
+          } else if (imglen == 0) {
+            $(".pic_0_del").detach();
+            $(".swiper-opts").detach();
+            //$(".pic_0_ins.line").css("display","block");
+            //$(".pic_0_ins.line").css("width","200px");
+            $(".layer01 .title2").css("padding-top", "0px");
+          }
+        }
+
+        $(".gallGridWrapper .item").click(function () {
+          zoomGallOpen($(this).index());
+        });
+
+        $("#books-write-open").click(function () {
+          $("#books-write").css("display", "block");
+          $("#books-write-open").css("display", "none");
+        });
       </script>
     </section>
 
@@ -483,7 +486,7 @@
       <div class="calwrap max-w-[90%] w-[280px] m-auto">
         <div class="f20 caltit text-center">
           <div class="caltit_tit text-[2rem] tracking-[1px] opacity-[0.95] text-[#544f4f]">
-              2025.04.06
+            2025.04.06
           </div>
           <div class="caltit_add tracking-[0] opacity-[0.8] text-[1.5rem] text-[#544f4f] mt-[7px]">
             일요일 오후 12시 30분
@@ -504,7 +507,7 @@
               </tr>
             </thead>
             <tbody>
-  
+
             </tbody>
           </table>
         </div>
@@ -563,29 +566,29 @@
           var c = '';
           var j = 0;
           var r = 1;
-          var end = (lastDay+todayLabel);
-          for(var i=1;i<=end;i++) {
-              if(j==0||j%7==0) {
-                  if(j==0) {
-                      c += '<tr>';
-                  }else{
-                      c += '</tr><tr>';
-                  }
+          var end = (lastDay + todayLabel);
+          for (var i = 1; i <= end; i++) {
+            if (j == 0 || j % 7 == 0) {
+              if (j == 0) {
+                c += '<tr>';
+              } else {
+                c += '</tr><tr>';
               }
-              if(todayLabel>0) {
-                  todayLabel--;
-                  c += '<td></td>';
-              }else{
-                  if(dday==r) {
-                      c += '<td><span class="dday">'+r+'</span></td>';
-                  }else{
-                      c += '<td class="cal_tr_td_'+r+'">'+r+'</td>';
-                  }
-
-                  r++;
+            }
+            if (todayLabel > 0) {
+              todayLabel--;
+              c += '<td></td>';
+            } else {
+              if (dday == r) {
+                c += '<td><span class="dday">' + r + '</span></td>';
+              } else {
+                c += '<td class="cal_tr_td_' + r + '">' + r + '</td>';
               }
 
-              j++;
+              r++;
+            }
+
+            j++;
           }
           c += '</tr>';
 
@@ -613,23 +616,23 @@
           }
         }
 
-        $(document).ready(function(){
-          if($("#calendar").is(":visible")) {
+        $(document).ready(function () {
+          if ($("#calendar").is(":visible")) {
             initCalendar();
 
             $.ajax({
-                type : 'get',
-                data : {"date" : '2024-10-01'},
-                url : '/holiday',
-                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                success : function(data){
-                    //console.log(data);
+              type: 'get',
+              data: { "date": '2024-10-01' },
+              url: '/holiday',
+              headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+              success: function (data) {
+                //console.log(data);
 
-                    $(data).each(function(idx,val){
-                        //console.log(val.day);
-                        $(".cal_tr_td_"+val.day).css("color", "var(--main-sun-day-color)");
-                    });
-                }
+                $(data).each(function (idx, val) {
+                  //console.log(val.day);
+                  $(".cal_tr_td_" + val.day).css("color", "var(--main-sun-day-color)");
+                });
+              }
             });
           }
 
@@ -707,31 +710,33 @@
 
     <div id="gustbk_op" class="guestbook-write-page wpopclass anibox_attend" style="display: none;">
       <form method="post" autocomplete="off">
-          <input type="hidden" name="_token" value="xx5aPhAgFJxZ03Qb4Lvcbad0oWIhL4grmQz6S4dk">
-          <div class="frm">
-              <div class="frmIn">
-                  <a class="clse" style="top: 11px; right: 25px; font-size: 26px; width: 30px; height: 30px;">
-                    <img style="width: 100%; height: 100%;" src="./assets/images/close.svg" id="exifviewer-img-2" exifid="1356656879" oldsrc="https://w.theirmood.com/src/img/close.svg">
-                  </a>
-                  <div class="hea">방명록 (축하 글)작성</div>
-                  <div class="att-fdver">
-                      <span class="nm"><span class="text">이름<b class="spot"></b></span></span>
-                      <input type="text" placeholder="이름을 입력해 주세요." name="name" maxlength="30" autocomplete="off">
-                  </div>
-                  <div class="att-fdver">
-                      <span class="nm"><span class="text">비밀번호<b class="spot"></b></span></span>
-                      <input type="password" placeholder="비밀번호를 입력해 주세요." name="password" maxlength="30" autocomplete="off">
-                  </div>
-                  <div class="att-fdver">
-                      <span class="nm"><span class="text">내용<b class="spot"></b></span></span>
-                      <textarea type="text" placeholder="내용을 작성해 주세요. (최대 500자)" name="note" maxlength="500" autocomplete="off"></textarea>
-                  </div>
-                  <div style="margin-top: 40px;">
-                      <a class="att-fdver-btn"><span class="font-base">신랑 &amp; 신부에게 </span><b>축하 글 전달하기</b></a>
-                  </div>
-                  <div style="height: 70px;"></div>
-              </div>
+        <input type="hidden" name="_token" value="xx5aPhAgFJxZ03Qb4Lvcbad0oWIhL4grmQz6S4dk">
+        <div class="frm">
+          <div class="frmIn">
+            <a class="clse" style="top: 11px; right: 25px; font-size: 26px; width: 30px; height: 30px;">
+              <img style="width: 100%; height: 100%;" src="./assets/images/close.svg" id="exifviewer-img-2"
+                exifid="1356656879" oldsrc="https://w.theirmood.com/src/img/close.svg">
+            </a>
+            <div class="hea">방명록 (축하 글)작성</div>
+            <div class="att-fdver">
+              <span class="nm"><span class="text">이름<b class="spot"></b></span></span>
+              <input type="text" placeholder="이름을 입력해 주세요." name="name" maxlength="30" autocomplete="off">
+            </div>
+            <div class="att-fdver">
+              <span class="nm"><span class="text">비밀번호<b class="spot"></b></span></span>
+              <input type="password" placeholder="비밀번호를 입력해 주세요." name="password" maxlength="30" autocomplete="off">
+            </div>
+            <div class="att-fdver">
+              <span class="nm"><span class="text">내용<b class="spot"></b></span></span>
+              <textarea type="text" placeholder="내용을 작성해 주세요. (최대 500자)" name="note" maxlength="500"
+                autocomplete="off"></textarea>
+            </div>
+            <div style="margin-top: 40px;">
+              <a class="att-fdver-btn"><span class="font-base">신랑 &amp; 신부에게 </span><b>축하 글 전달하기</b></a>
+            </div>
+            <div style="height: 70px;"></div>
           </div>
+        </div>
       </form>
     </div>
 
@@ -746,8 +751,7 @@
         </h3>
         <div class="guestbook-area m-[30px]">
           <div class="guestbookBtn leading-[1.76] py-[30px] text-right">
-            <button
-              id="books-write-open"
+            <button id="books-write-open"
               class="border border-[1px] border-solid border-[#eaeaea] rounded-[16px] text-[1.3rem] bg-[#fff] h-[40px] w-[100px] books-w">
               작성하기
             </button>
@@ -756,68 +760,221 @@
 
       </div>
       <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
           gubook_write_sctop = 0;
 
           // 방명록 전체보기 팝업 열기
-          $(".books-all > a.a, #books-all-open").click(function(){ gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%"); $("html,body").css("overflow-y", "hidden"); $("#gustbk_list").css("display", "block"); });
+          $(".books-all > a.a, #books-all-open").click(function () { gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%"); $("html,body").css("overflow-y", "hidden"); $("#gustbk_list").css("display", "block"); });
           // 방명록 작성 팝업 열기
-          $("#books-write-open, .books-all > a.w").click(function(){ 
-            gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%"); 
-            $("html,body").css("overflow-y", "hidden"); 
-            $("#gustbk_op").css("display", "block"); 
+          $("#books-write-open, .books-all > a.w").click(function () {
+            gubook_write_sctop = $(window).scrollTop(); $("html,body").css("height", "100%");
+            $("html,body").css("overflow-y", "hidden");
+            $("#gustbk_op").css("display", "block");
           });
           // 팝업 닫기
-          $("#gustbk_list .clse, #gustbk_op .clse").click(function(){ $("html,body").css("height", "auto"); $("html,body").css("overflow-y", "visible");$("html, body").animate({scrollTop: gubook_write_sctop},10);$(this).parents(".wpopclass").css("display", "none"); });
+          $("#gustbk_list .clse, #gustbk_op .clse").click(function () { $("html,body").css("height", "auto"); $("html,body").css("overflow-y", "visible"); $("html, body").animate({ scrollTop: gubook_write_sctop }, 10); $(this).parents(".wpopclass").css("display", "none"); });
           // 방명록 삭제 버튼 클릭
-          $(".books-swiper .swiper-slide .close").click(function(){ deBooks(this); });
+          $(".books-swiper .swiper-slide .close").click(function () { deBooks(this); });
           var isBooksWriteLoading = false;
 
           // 방명록 작성하기 버튼 클릭
-          $("#gustbk_op .att-fdver-btn").click(function(){
+          $("#gustbk_op .att-fdver-btn").click(function () {
 
-              var data = $("#gustbk_op form").serializeObject();
-              if(!check.isNotNull(data.name)) {alert("이름을 입력해주세요.");return;}
-              if(!check.isNotNull(data.password)) {alert("비밀번호를 입력해주세요.");return;}
-              if(!check.isNotNull(data.note)) {alert("방명록 내용을 입력해주세요.");return;}
+            var data = $("#gustbk_op form").serializeObject();
+            if (!check.isNotNull(data.name)) { alert("이름을 입력해주세요."); return; }
+            if (!check.isNotNull(data.password)) { alert("비밀번호를 입력해주세요."); return; }
+            if (!check.isNotNull(data.note)) { alert("방명록 내용을 입력해주세요."); return; }
 
-              data.name = data.name.trim();
-              if(data.name.length<1) {
-                  alert("이름은 1글자 이상 입력해주세요."); return;
-              }
+            data.name = data.name.trim();
+            if (data.name.length < 1) {
+              alert("이름은 1글자 이상 입력해주세요."); return;
+            }
 
-              data.password = data.password.trim();
-              if(data.password.length<4) {
-                  alert("비밀번호는 4글자 이상 입력해주세요."); return;
-              }
+            data.password = data.password.trim();
+            if (data.password.length < 4) {
+              alert("비밀번호는 4글자 이상 입력해주세요."); return;
+            }
 
-              if(!isBooksWriteLoading) {
-                  isBooksWriteLoading = true;
-                  loading(true);
-                  $.ajax({
-                      type : 'post',
-                      //dataType : "text",
-                      //contentType : "application/json; charset=utf-8",
-                      data : data,
-                      //async : false,
-                      url : '/card-books/ncGgF35EJm',
-                      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-                      success : function(data){
-                          loading(false);
-                          location.reload();
-                      },
-                      error : function(err) {
-                          loading(false);
-                          isBooksWriteLoading = false;
-                          console.log(err);
-                          alert("등록 중에 문제가 발생했습니다.\r\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
-                      }
-                  });
-              }
+            if (!isBooksWriteLoading) {
+              isBooksWriteLoading = true;
+              loading(true);
+              $.ajax({
+                type: 'post',
+                //dataType : "text",
+                //contentType : "application/json; charset=utf-8",
+                data: data,
+                //async : false,
+                url: '/card-books/ncGgF35EJm',
+                headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+                success: function (data) {
+                  loading(false);
+                  location.reload();
+                },
+                error: function (err) {
+                  loading(false);
+                  isBooksWriteLoading = false;
+                  console.log(err);
+                  alert("등록 중에 문제가 발생했습니다.\r\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
+                }
+              });
+            }
 
           });
         });
       </script>
+    </section>
+
+    <section class="account py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp scroll_wrap">
+      <div class="scroll_on type_bottom">
+        <div
+          class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
+          ACCOUNT
+        </div>
+        <h3 class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]" style="-webkit-text-stroke: 0.2px;">
+          마음 전하실 곳
+        </h3>
+        <div class="sectionDesc text-[#544f4f] text-[1.4rem] leading-[1.75] mt-[20px] py-0 px-[33px]">
+          참석이 어려우신 분들을 위해
+          <br />
+          계좌번호를 기재하였습니다.
+          <br />
+          너그러운 마음으로 양해 부탁드립니다.
+        </div>
+        <div class="lai_2">
+
+
+          <!-- 아코디언 계좌 -->
+
+          <div id="tel_ul_3" class="pt-[30px] opacity-[1] anibox hd animated fadeInUp">
+
+            <div class="pack_wrap clearfix active w-[310px] background-[#fff] mb-[10px] margin-auto">
+              <!-- pack_man pack_woman --><a class="pack">신랑측 계좌번호<i class="fa fa-chevron-down"></i></a>
+              <ul class="c accordion-list accordion1">
+                <li class="ft-gowun-bold ">
+
+                  <a class="holder" onclick="copy_to_clipboard2('actnm-1-1')">
+                    <img src="/src/img/copy.svg">
+                    <span>김진호</span>
+                  </a>
+
+                  <a class="accounts" onclick="copy_to_clipboard2('actnm-1-1')">
+                    <span class="bnk">우리은행</span>
+                    <span class="nmb">110-000-000000</span>
+                  </a>
+
+                  <textarea id="actnm-1-1" class="txtnone">우리은행 110-000-000000</textarea>
+
+                  <div class="quick">
+                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
+                        src="/src/img/pay-kakao.svg"></a>
+                  </div>
+                </li>
+                <li class="ft-gowun-bold ">
+
+                  <a class="holder" onclick="copy_to_clipboard2('actnm-1-2')">
+                    <img src="/src/img/copy.svg">
+                    <span>김건호</span>
+                  </a>
+
+                  <a class="accounts" onclick="copy_to_clipboard2('actnm-1-2')">
+                    <span class="bnk">신한은행</span>
+                    <span class="nmb">110-000-000000</span>
+                  </a>
+
+                  <textarea id="actnm-1-2" class="txtnone">신한은행 110-000-000000</textarea>
+
+                  <div class="quick">
+                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
+                        src="/src/img/pay-kakao.svg"></a>
+                  </div>
+                </li>
+                <li class="ft-gowun-bold ">
+
+                  <a class="holder" onclick="copy_to_clipboard2('actnm-1-3')">
+                    <img src="/src/img/copy.svg">
+                    <span>이미자</span>
+                  </a>
+
+                  <a class="accounts" onclick="copy_to_clipboard2('actnm-1-3')">
+                    <span class="bnk">하나은행</span>
+                    <span class="nmb">110-000-000000</span>
+                  </a>
+
+                  <textarea id="actnm-1-3" class="txtnone">하나은행 110-000-000000</textarea>
+
+                  <div class="quick">
+                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
+                        src="/src/img/pay-kakao.svg"></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="pack_wrap clearfix">
+              <!-- pack_man pack_woman --><a class="pack">신부측 계좌번호<i class="fa fa-chevron-down"></i></a>
+              <ul class="c accordion-list accordion1">
+                <li class="ft-gowun-bold ">
+
+                  <a class="holder" onclick="copy_to_clipboard2('actnm-2-1')">
+                    <img src="/src/img/copy.svg">
+                    <span>이나은</span>
+                  </a>
+
+                  <a class="accounts" onclick="copy_to_clipboard2('actnm-2-1')">
+                    <span class="bnk">국민은행</span>
+                    <span class="nmb">110-000-000000</span>
+                  </a>
+
+                  <textarea id="actnm-2-1" class="txtnone">국민은행 110-000-000000</textarea>
+
+                  <div class="quick">
+                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
+                        src="/src/img/pay-kakao.svg"></a>
+                  </div>
+                </li>
+                <li class="ft-gowun-bold ">
+
+                  <a class="holder" onclick="copy_to_clipboard2('actnm-2-2')">
+                    <img src="/src/img/copy.svg">
+                    <span>이주명</span>
+                  </a>
+
+                  <a class="accounts" onclick="copy_to_clipboard2('actnm-2-2')">
+                    <span class="bnk">농협</span>
+                    <span class="nmb">110-000-000000</span>
+                  </a>
+
+                  <textarea id="actnm-2-2" class="txtnone">농협 110-000-000000</textarea>
+
+                  <div class="quick">
+                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
+                        src="/src/img/pay-kakao.svg"></a>
+                  </div>
+                </li>
+                <li class="ft-gowun-bold ">
+
+                  <a class="holder" onclick="copy_to_clipboard2('actnm-2-3')">
+                    <img src="/src/img/copy.svg">
+                    <span>유수지</span>
+                  </a>
+
+                  <a class="accounts" onclick="copy_to_clipboard2('actnm-2-3')">
+                    <span class="bnk">카카오뱅크</span>
+                    <span class="nmb">110-000-000000</span>
+                  </a>
+
+                  <textarea id="actnm-2-3" class="txtnone">카카오뱅크 110-000-000000</textarea>
+
+                  <div class="quick">
+                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
+                        src="/src/img/pay-kakao.svg"></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section class=" attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp scroll_wrap">
@@ -853,44 +1010,58 @@
   ---------------------------------------------->
   <div class="zoomGallWrapper" style="">
     <a class="close">
-        <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.86018 16.829L16.3455 8.34375" stroke="#555" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#555" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-        </svg>
+      <svg width="45" height="45" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.86018 16.829L16.3455 8.34375" stroke="#555" stroke-width="1" stroke-miterlimit="10"
+          stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M16.2431 16.7275L7.75781 8.24219" stroke="#555" stroke-width="1" stroke-miterlimit="10"
+          stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
     </a>
     <div id="fullbox" class="">
-        <div class="swiper-wrapper" id="swiper-wrapper-0215e8f87383e13f" aria-live="polite">
-          <div class="swiper-slide" role="group" aria-label="1 / 19">
-            <div class="swiper-zoom-container">
-              <img class="vs imgblk rs" src="./assets/images/gallery/d49.JPEG?f=web&amp;w=1280">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="2 / 19">
-            <div class="swiper-zoom-container">
-              <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG?f=webp&amp;w=1280" style="display: none;">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="18 / 19">
-            <div class="swiper-zoom-container">
-              <img class="vs imgblk rs" src="./assets/images/gallery/e12.JPEG??f=webp&amp;w=1280" style="display: none;">
-            </div>
-          </div>
-          <div class="swiper-slide" role="group" aria-label="19 / 19">
-            <div class="swiper-zoom-container">
-              <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG??f=webp&amp;w=1280" style="display: none;">
-            </div>
+      <div class="swiper-wrapper" id="swiper-wrapper-0215e8f87383e13f" aria-live="polite">
+        <div class="swiper-slide" role="group" aria-label="1 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/d49.JPEG?f=web&amp;w=1280">
           </div>
         </div>
-        <div class="swiper-button-next swiper-opts" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
-        <div class="swiper-button-prev swiper-opts" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
-        <div class="swiper-pagination swiper-opts swiper-pagination-bullets-dynamic" style="width: 40px;">
-          <span class="swiper-pagination-bullet" style="left: -16px;"></span>
-          <span class="swiper-pagination-bullet" style="left: -16px;"></span>
-          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev-prev" style="left: -16px;"></span>
-          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev" style="left: -16px;"></span>
-          <span class="swiper-pagination-bullet swiper-pagination-bullet-active-main" aria-current="true" style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span>
-          <span class="swiper-pagination-bullet" style="left: -16px;"></span>
-          <span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span></div>
+        <div class="swiper-slide" role="group" aria-label="2 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG?f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="18 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/e12.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="19 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-opts" tabindex="0" role="button" aria-label="Next slide"
+        aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
+      <div class="swiper-button-prev swiper-opts" tabindex="0" role="button" aria-label="Previous slide"
+        aria-controls="swiper-wrapper-0215e8f87383e13f"></div>
+      <div class="swiper-pagination swiper-opts swiper-pagination-bullets-dynamic" style="width: 40px;">
+        <span class="swiper-pagination-bullet" style="left: -16px;"></span>
+        <span class="swiper-pagination-bullet" style="left: -16px;"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev-prev" style="left: -16px;"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active-prev" style="left: -16px;"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active-main" aria-current="true"
+          style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next"
+          style="left: -16px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next"
+          style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span>
+        <span class="swiper-pagination-bullet" style="left: -16px;"></span>
+        <span class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet"
+          style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span
+          class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet"
+          style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span
+          class="swiper-pagination-bullet" style="left: -16px;"></span><span class="swiper-pagination-bullet"
+          style="left: -16px;"></span><span class="swiper-pagination-bullet" style="left: -16px;"></span><span
+          class="swiper-pagination-bullet" style="left: -16px;"></span>
+      </div>
     </div>
   </div>
 </body>
