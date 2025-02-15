@@ -690,16 +690,18 @@
 }
 .accst02 .pack {
   display: block;
-  font-size: 1.7rem;
-  height: 42px;
-  line-height: 42px;
+  font-size: 1.4rem;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
-  background: rgb(241, 243, 248);
+  background: rgb(243, 243, 243);
   box-sizing: border-box;
   padding: 0px 20px;
   position: relative;
   color: #444;
-  border-radius: 6px 6px 6px 6px;
+  border-radius: 4px;
+  border: 0;
+  border-bottom: 1px dashed #e2e4ea;
 }
 .ft-myeongjo .accst02 .pack {
   font-size: 1.4rem;
@@ -784,7 +786,6 @@
   top: 39px;
   width: 60px;
   text-align: center;
-  font-family: "Noto Sans KR", sans-serif;
   height: 24px;
   line-height: 24px;
   font-weight: bold;
@@ -815,4 +816,148 @@
 .guckhwa {
   height: 18px;
   vertical-align: sub;
+}
+
+.accordion-list {
+
+}
+.accordion-list > li {
+    display: grid;
+    gap: 8px;
+    position: relative;
+    padding: 16px !important;
+} 
+.accordion-list > li.ro1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 16px !important;
+}
+.accordion-list > li .holder {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1;
+}
+.accordion-list > li a {
+    color: inherit;
+    cursor: pointer;
+}
+.accordion-list > li .holder > img {
+    width: 15px;
+}
+.accordion-list > li .holder > span {
+    font-size: 1.2rem;
+}
+.accordion-list > li .accounts {
+    display: flex; 
+    gap: 8px;
+    font-size: 1.15rem;
+}
+.accordion-list > li .accounts .bnk {
+    
+}
+.accordion-list > li .accounts .nmb {
+    
+}
+
+.accordion-list > li .quick {
+    position: absolute;
+    right: 16px;
+    top: 0; bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+    gap: 6px;
+    align-items: center;
+}
+.accordion-list > li.ro1 .quick {
+    display: none;
+}
+.accordion-list > li .quick .pay {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.accordion-list > li .quick .pay > img {
+    
+}
+.accordion-list > li .quick .pay.kakaopay {
+    background: #FFEB00; 
+} 
+.accordion-list > li .quick .pay.card { 
+    background: #437EFF;
+    background: #333;
+}
+
+/* 그룹형 안내사항 디자인 */
+.informationSection.layer .swiper-wrapper .imgdiv .img.c1 {background-image: url('https://d38fyys32noduv.cloudfront.net/commons/card_info/photo_booth.jpg');}
+.informationSection.layer .swiper-wrapper .imgdiv .img.c2 {background-image: url('https://d38fyys32noduv.cloudfront.net/commons/card_info/dining.jpg');}
+.informationSection.layer .swiper-wrapper .imgdiv .img.c3 {background-image: url('https://d38fyys32noduv.cloudfront.net/commons/card_info/venue.jpg');}
+.informationSection.layer .swiper-wrapper .imgdiv .img.c4 {background-image: url('https://d38fyys32noduv.cloudfront.net/commons/card_info/parking.jpg');}
+.informationSection.layer .swiper-wrapper .imgdiv .img.c5 {background-image: url('https://d38fyys32noduv.cloudfront.net/commons/card_info/party.jpg');}
+.informationSection.layer .swiper-wrapper .imgdiv .img.c6 {background-image: url('https://d38fyys32noduv.cloudfront.net/commons/card_info/bus.jpg');}
+.informationSection.layer .swiper-wrapper .imgdiv .img.c7 {background-image: url('https://d38fyys32noduv.cloudfront.net/commons/card_info/venue2.jpg');}
+
+.infoTab01 {
+    text-align: center;
+    padding-bottom: 21px;
+}
+
+.infoTab01 .tabContent {
+    box-sizing: border-box;
+    max-width: 280px; margin: 21px 0 0 0;
+}
+.infoTab01 .tabContent .imgdiv {
+    padding: 0 0px; position: relative;
+    margin: auto auto 21px auto;
+}
+.infoTab01 .tabContent .imgdiv .txt {
+    color: #fff; position: absolute; margin: auto; font-size: 1.7rem; left: 0; right: 0;
+    -webkit-text-stroke: 0.4px;
+    z-index: 5; color: #454545; display: none;
+}
+.infoTab01 .tabContent .imgdiv .img {
+    position: relative;
+    height: 90px;
+    width: 100%;
+    background-image: url(https://img.freepik.com/premium-photo/luxury-wedding-decor_661495-20250.jpg?w=1380);
+    /*filter: blur(1.5px);*/
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 26px 26px 0 26px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.infoTab01 .tabContent .imgdiv .img:after {
+    /*content: " ";
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 3;*/
+}
+
+.infoTab01 .t-btn {
+    box-shadow: 1px 1px 2px rgb(0 0 0/2%);
+    /*font-size: 1.3rem;*/
+    cursor: pointer;
+}
+.infoTab01 .tabContent .sectionDesc {
+    /*font-size: 1.3rem;*/ word-break: keep-all; padding: 0;
+
+}
+.infoTab01 .tabContent .sectionDesc,
+.infoTab01 .tabContent .sectionBottom {
+    display: none;
+}
+
+.infoTab01 .tabContent.swiper-slide-active .sectionDesc,
+.infoTab01 .tabContent.swiper-slide-active .sectionBottom {
+    display: block;
 }

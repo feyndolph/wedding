@@ -135,33 +135,48 @@
       <div class="clearfix anibox hd visible mt-[33px] animated fadeInUp">
         <div class="gallGridWrapper multiple ratio twoRow" style="height: 366px;">
           <div class="item" style="background-image: url(./assets/images/gallery/d49.JPEG);">
-            <img src="./assets/images/gallery/d49.JPEG" class="box rectangle">
+            <img src="./assets/images/gallery/horizontal.png" class="box rectangle">
           </div>
           <div class="item"
             style="background-image: url(./assets/images/gallery/c27.JPEG?f=webp&amp;w=500); grid-area: span 2">
-            <img src="./assets/images/gallery/c27.JPEG" class="box rectangle">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/e12.JPEG); grid-area: span 2">
-            <img src="/assets/images/gallery/e12.JPEG" class="box rectangle">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/b30.JPEG);">
-            <img src="/src/img/card/horizontal.png" class="box rectangle">
+            <img src="./assets/images/gallery/horizontal.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/f64.JPEG);">
-            <img src="/src/img/card/horizontal.png" class="box rectangle">
+            <img src="./assets/images/gallery/horizontal.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/b9.JPEG); grid-area: span 2">
-            <img src="/src/img/card/vertical.png" class="box rectangle">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/f70.JPEG); grid-area: span 2">
-            <img src="/src/img/card/vertical.png" class="box rectangle">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/f75.JPEG); grid-area: span 2">
-            <img src="/src/img/card/vertical.png" class="box rectangle">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
           </div>
           <div class="item" style="background-image: url(./assets/images/gallery/d4.JPEG); grid-area: span 2">
-            <img src="/src/img/card/vertical.png" class="box rectangle">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
           </div>
+          <div class="item" style="background-image: url(./assets/images/gallery/f27.JPEG);">
+            <img src="./assets/images/gallery/horizontal.png" class="box rectangle">
+          </div>
+          <div class="item" style="background-image: url(./assets/images/gallery/d72.JPEG?f=web&w=500); grid-area: span 2">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
+          </div>          
+          <div class="item" style="background-image: url(./assets/images/gallery/b21.JPEG?f=web&w=500); grid-area: span 2">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
+          </div>          
+          <div class="item" style="background-image: url(./assets/images/gallery/phone-1.jpg); grid-area: span 2">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
+          </div>   
+          <div class="item" style="background-image: url(./assets/images/gallery/d46.JPEG); grid-area: span 2">
+            <img src="./assets/images/gallery/vertical.png" class="box rectangle">
+          </div>   
         </div>
 
         <div class="moreBtnWrap" style="position: relative">
@@ -709,6 +724,35 @@
 
     </section>
 
+    <section class="information py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp">
+      <div class="scroll_on type_bottom">
+        <div class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
+          INFORMATION
+        </div>
+        <h3 class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]" style="-webkit-text-stroke: 0.2px;">
+          예식정보 및 안내사항
+        </h3>
+        <div class="information-desc mt-[21px]">
+            <div class="imgDiv max-w-[280px] m-auto">
+              <div class="img h-[90px] w-full bg-cover bg-center relative rounded-3xl rounded-br-none" style="background-image: url(./assets/images/dining.jpg)"></div>
+            </div>
+            <div class="desc-title text-[1.8rem] mt-[21px] pb-[21px]">
+              <span>연회 & 식사 안내</span>
+            </div>
+            <div class="desc-text text-[#544f4f] text-[1.4rem]">
+              <p>식사는 결혼식 및 사진 촬영이 끝난 후<br>
+                앉으신 테이블에서 스테이크와 세미 뷔페로 진행됩니다.<br><br>
+                부족함 없이 즐기실 수 있도록<br>
+                한식을 비롯해 중식, 양식, 일식 등<br>
+                다양한 메뉴가 준비되어 있습니다.
+              </p>
+            </div>
+        </div>      
+      </div>
+    </section>
+
+
+
     <div id="gustbk_op" class="guestbook-write-page wpopclass anibox_attend" style="display: none;">
       <form method="post" autocomplete="off">
         <input type="hidden" name="_token" value="xx5aPhAgFJxZ03Qb4Lvcbad0oWIhL4grmQz6S4dk">
@@ -721,15 +765,15 @@
             <div class="hea">방명록 (축하 글)작성</div>
             <div class="att-fdver">
               <span class="nm"><span class="text">이름<b class="spot"></b></span></span>
-              <input type="text" placeholder="이름을 입력해 주세요." name="name" maxlength="30" autocomplete="off">
+              <input type="text" placeholder flex items-center gap-[8px] leading-[1px]="이름을 입력해 주세요." name="name" maxlength="30" autocomplete="off">
             </div>
             <div class="att-fdver">
               <span class="nm"><span class="text">비밀번호<b class="spot"></b></span></span>
-              <input type="password" placeholder="비밀번호를 입력해 주세요." name="password" maxlength="30" autocomplete="off">
+              <input type="password" placeholder flex items-center gap-[8px] leading-[1px]="비밀번호를 입력해 주세요." name="password" maxlength="30" autocomplete="off">
             </div>
             <div class="att-fdver">
               <span class="nm"><span class="text">내용<b class="spot"></b></span></span>
-              <textarea type="text" placeholder="내용을 작성해 주세요. (최대 500자)" name="note" maxlength="500"
+              <textarea type="text" placeholder flex items-center gap-[8px] leading-[1px]="내용을 작성해 주세요. (최대 500자)" name="note" maxlength="500"
                 autocomplete="off"></textarea>
             </div>
             <div style="margin-top: 40px;">
@@ -846,78 +890,59 @@
 
           <!-- 아코디언 계좌 -->
 
-          <div id="tel_ul_3" class="pt-[30px] opacity-[1] anibox hd animated fadeInUp">
+          <div id="tel_ul_3" class="accst02 pt-[30px] opacity-[1] anibox hd animated fadeInUp">
 
             <div class="pack_wrap clearfix active w-[310px] background-[#fff] mb-[10px] margin-auto">
-              <!-- pack_man pack_woman --><a class="pack">신랑측 계좌번호<i class="fa fa-chevron-down"></i></a>
+              <!-- pack_man pack_woman --><a class="pack">계좌번호<i class="fa fa-chevron-down"></i></a>
               <ul class="c accordion-list accordion1">
-                <li class="ft-gowun-bold ">
+                <li class="ft-gowun-bold">
 
-                  <a class="holder" onclick="copy_to_clipboard2('actnm-1-1')">
-                    <img src="/src/img/copy.svg">
-                    <span>김진호</span>
+                  <a class="holder flex items-center gap-[8px] leading-[1px]" onclick="copy_to_clipboard2('actnm-1-1')">
+                    <img src="./assets/images/copy.svg">
+                    <span>김도경</span>
                   </a>
 
-                  <a class="accounts" onclick="copy_to_clipboard2('actnm-1-1')">
-                    <span class="bnk">우리은행</span>
-                    <span class="nmb">110-000-000000</span>
+                  <a class="accounts flex gap-[8px] text-[1.15rem]" onclick="copy_to_clipboard2('actnm-1-1')">
+                    <span class="bnk">국민은행</span>
+                    <span class="nmb">571502-01-203818</span>
                   </a>
 
-                  <textarea id="actnm-1-1" class="txtnone">우리은행 110-000-000000</textarea>
+                  <textarea id="actnm-1-1" class="txtnone">국민은행 571502-01-203818</textarea>
 
                   <div class="quick">
-                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
-                        src="/src/img/pay-kakao.svg"></a>
+                    <a class="pay kakaopay" href="#"><img
+                        src="./assets/images/account_img.png"></a>
                   </div>
                 </li>
                 <li class="ft-gowun-bold ">
 
-                  <a class="holder" onclick="copy_to_clipboard2('actnm-1-2')">
-                    <img src="/src/img/copy.svg">
-                    <span>김건호</span>
+                  <a class="holder flex items-center gap-[8px] leading-[1px]" onclick="copy_to_clipboard2('actnm-1-2')">
+                    <img src="./assets/images/copy.svg">
+                    <span>김재원</span>
                   </a>
 
                   <a class="accounts" onclick="copy_to_clipboard2('actnm-1-2')">
-                    <span class="bnk">신한은행</span>
-                    <span class="nmb">110-000-000000</span>
+                    <span class="bnk">카카오뱅크</span>
+                    <span class="nmb">3333-02848-0108</span>
                   </a>
 
-                  <textarea id="actnm-1-2" class="txtnone">신한은행 110-000-000000</textarea>
+                  <textarea id="actnm-1-2" class="txtnone">카카오뱅크 3333-02848-0108</textarea>
 
                   <div class="quick">
-                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
-                        src="/src/img/pay-kakao.svg"></a>
+                    <a class="pay kakaopay" href="#"><img
+                        src="./assets/images/account_img.png"></a>
                   </div>
-                </li>
-                <li class="ft-gowun-bold ">
-
-                  <a class="holder" onclick="copy_to_clipboard2('actnm-1-3')">
-                    <img src="/src/img/copy.svg">
-                    <span>이미자</span>
-                  </a>
-
-                  <a class="accounts" onclick="copy_to_clipboard2('actnm-1-3')">
-                    <span class="bnk">하나은행</span>
-                    <span class="nmb">110-000-000000</span>
-                  </a>
-
-                  <textarea id="actnm-1-3" class="txtnone">하나은행 110-000-000000</textarea>
-
-                  <div class="quick">
-                    <a class="pay kakaopay" href="https://qr.kakaopay.com/281006011000000310267128"><img
-                        src="/src/img/pay-kakao.svg"></a>
-                  </div>
-                </li>
+                </li>                
               </ul>
             </div>
-            <div class="pack_wrap clearfix">
-              <!-- pack_man pack_woman --><a class="pack">신부측 계좌번호<i class="fa fa-chevron-down"></i></a>
+            <!-- <div class="pack_wrap clearfix">
+              <a class="pack">신부측 계좌번호<i class="fa fa-chevron-down"></i></a>
               <ul class="c accordion-list accordion1">
                 <li class="ft-gowun-bold ">
 
-                  <a class="holder" onclick="copy_to_clipboard2('actnm-2-1')">
-                    <img src="/src/img/copy.svg">
-                    <span>이나은</span>
+                  <a class="holder flex items-center gap-[8px] leading-[1px]" onclick="copy_to_clipboard2('actnm-2-1')">
+                    <img src="./assets/images/copy.svg">
+                    <span>김재원</span>
                   </a>
 
                   <a class="accounts" onclick="copy_to_clipboard2('actnm-2-1')">
@@ -934,8 +959,8 @@
                 </li>
                 <li class="ft-gowun-bold ">
 
-                  <a class="holder" onclick="copy_to_clipboard2('actnm-2-2')">
-                    <img src="/src/img/copy.svg">
+                  <a class="holder flex items-center gap-[8px] leading-[1px]" onclick="copy_to_clipboard2('actnm-2-2')">
+                    <img src="./assets/images/copy.svg">
                     <span>이주명</span>
                   </a>
 
@@ -953,8 +978,8 @@
                 </li>
                 <li class="ft-gowun-bold ">
 
-                  <a class="holder" onclick="copy_to_clipboard2('actnm-2-3')">
-                    <img src="/src/img/copy.svg">
+                  <a class="holder flex items-center gap-[8px] leading-[1px]" onclick="copy_to_clipboard2('actnm-2-3')">
+                    <img src="./assets/images/copy.svg">
                     <span>유수지</span>
                   </a>
 
@@ -971,11 +996,40 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
 
       </div>
+      <script>
+
+        console.log("1");
+        
+        $(document).ready(function(){
+        
+            if($(".accordion1 li").length==3) {$(".accordion1").addClass("cnt3");}
+            if($(".accordion1 li").length==2) {$(".accordion1").addClass("cnt2");}
+            if($(".accordion1 li").length==1) {$(".accordion1").addClass("cnt1");}
+        
+            if($(".accordion2 li").length==3) {$(".accordion2").addClass("cnt3");}
+            if($(".accordion2 li").length==2) {$(".accordion2").addClass("cnt2");}
+            if($(".accordion2 li").length==1) {$(".accordion2").addClass("cnt1");}
+        
+            $(".pack").click(function(){
+                $(this).parent().toggleClass("active");
+                /*if(this.nextElementSibling.style.height) {
+                    this.nextElementSibling.style.height = ''
+                } else {
+                    this.nextElementSibling.style.height = this.nextElementSibling.scrollHeight + 'px'
+                }*/
+            });
+                    //$(".pack.pack_man").click();
+                
+                    $(".kakaopaylink").attr("href","javascript:alert('샘플 청첩장에는 카톡송금이 불가능합니다.');");
+            
+        
+        });
+      </script>
     </section>
 
     <section class=" attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp scroll_wrap">
@@ -1030,14 +1084,64 @@
             <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG?f=webp&amp;w=1280" style="display: none;">
           </div>
         </div>
-        <div class="swiper-slide" role="group" aria-label="18 / 19">
+        <div class="swiper-slide" role="group" aria-label="3 / 19">
           <div class="swiper-zoom-container">
             <img class="vs imgblk rs" src="./assets/images/gallery/e12.JPEG??f=webp&amp;w=1280" style="display: none;">
           </div>
         </div>
-        <div class="swiper-slide" role="group" aria-label="19 / 19">
+        <div class="swiper-slide" role="group" aria-label="4 / 19">
           <div class="swiper-zoom-container">
-            <img class="vs imgblk rs" src="./assets/images/gallery/c27.JPEG??f=webp&amp;w=1280" style="display: none;">
+            <img class="vs imgblk rs" src="./assets/images/gallery/.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="5 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/f64.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="6 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/b9.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="7 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/f70.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="8 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/f75.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="9 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/d4.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="10 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/f27.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="11 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/d72.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="12 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/b21.JPEG??f=webp&amp;w=1280" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="13 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/phone-1.jpg" style="display: none;">
+          </div>
+        </div>
+        <div class="swiper-slide" role="group" aria-label="14 / 19">
+          <div class="swiper-zoom-container">
+            <img class="vs imgblk rs" src="./assets/images/gallery/d46.JPEG??f=webp&amp;w=1280" style="display: none;">
           </div>
         </div>
       </div>
