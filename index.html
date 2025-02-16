@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale" />
   <meta property="og:image" content="./assets/images/gallery/d49.JPEG" />
   <title>김도경, 김재원 결혼합니다♥</title>
 
@@ -1024,7 +1024,6 @@
     </section>
 
     <section class="account py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp scroll_wrap">
-      <div class="scroll_on type_bottom">
         <div
           class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
           ACCOUNT
@@ -1153,8 +1152,6 @@
             </div> -->
           </div>
         </div>
-
-      </div>
       <script>
 
         console.log("1");
@@ -1185,29 +1182,27 @@
         });
       </script>
     </section>
-
     <section class=" attend py-[40px] px-0 m-0 animated animatedFadeInUp fadeInUp scroll_wrap">
-      <div class="scroll_on type_bottom">
-        <div
-          class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
-          R.S.V.P.
-        </div>
-        <h3 class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]" style="-webkit-text-stroke: 0.2px;">
-          참석 의사 전달
-        </h3>
-        <div class="sectionDesc text-[#544f4f] text-[1.4rem] leading-[1.75] mt-[20px] py-0 px-[33px]">
-          신랑, 신부에게 참석의사를
-          <br />
-          미리 전달할 수있어요.
-        </div>
-        <div class="attendBtn leading-[1.76] py-[30px]">
-          <button
-            class="border bg-white border-[#eeeeee] text-[#404040] text-[1.4rem] h-[48px] rounded-[14px] py-0 px-[30px] min-w-[215px]"
-            style="-webkit-text-stroke: 0.2px;">
-            <span class="i opacity-[0.7]"><i class="fa fa-check"></i>&nbsp;</span>
-            참석의사 전달하기
-          </button>
-        </div>
+      <div
+        class="enstr text-[1.2rem] leading-[30px] tracking-[3px] text-[#f79e9e] opacity-[0.6] font-['Crimson_Pro']">
+        R.S.V.P.
+      </div>
+      <h3 class="text-[1.8rem] text-[#f79e9e] tracking-[.5px] leading-[2]" style="-webkit-text-stroke: 0.2px;">
+        참석 의사 전달
+      </h3>
+      <div class="sectionDesc text-[#544f4f] text-[1.4rem] leading-[1.75] mt-[20px] py-0 px-[33px]">
+        신랑, 신부에게 참석의사를
+        <br />
+        미리 전달할 수있어요.
+      </div>
+      <div class="attendBtn leading-[1.76] py-[30px]">
+        <button
+          class="border bg-white border-[#eeeeee] text-[#404040] text-[1.4rem] h-[48px] rounded-[14px] py-0 px-[30px] min-w-[215px]"
+          style="-webkit-text-stroke: 0.2px;"
+          id="rsvpBtn">
+          <span class="i opacity-[0.7]"><i class="fa fa-check"></i>&nbsp;</span>
+          참석의사 전달하기
+        </button>
       </div>
     </section>
     <footer class="py-[20px]">
@@ -1326,6 +1321,9 @@
 </body>
 <script>
   $(document).ready(function () {
+    $("#rsvpBtn").on('click', function() {
+        window.open("https://naver.me/xJiFY5Mf", "_blank");
+    });
     // 클래스가 "scroll_on"인 모든 요소를 선택합니다.
     const $counters = $(".scroll_on");
 
