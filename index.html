@@ -671,7 +671,7 @@
           $(".countdown .data-min").text(minutes);
           $(".countdown .data-sec").text(seconds);
           if (day >= 0) {
-            $("#call-comment").text("도경, 재원의 결혼식이 " + day + "일 남았습니다.");
+            $("#call-comment").text("도경 ♥ 재원의 결혼식이 " + day + "일 남았습니다.");
           } else {
             $("#call-comment").text("도경, 재원의 결혼식이 " + Math.abs(day) + "일 지났습니다.");
           }
@@ -843,8 +843,10 @@
         </h3>
         <div class="books-open-list m-[30px]">
           <ul id="guestbook-ul" class="books-open-list-ul">
-            
           </ul>
+        </div>
+        <div id="moreBtn" class="moreBtn text-[1.4rem] text-[#544f4f] cursor-pointer">
+            더보기&nbsp;&nbsp;<i class="fa fa-chevron-down" style="color: #666;"></i>
         </div>
         <div class="guestbook-area m-[30px]">
           <div class="guestbookBtn leading-[1.76] py-[30px] text-right">
@@ -862,7 +864,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
         import { getFirestore } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
-        import { collection, getDocs, addDoc, Timestamp, deleteDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+        import { collection, getDocs, addDoc, Timestamp, deleteDoc, doc, getDoc, orderBy, query } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -894,10 +896,12 @@
           booksPage++;
           
           try {
-            const querySnapshot = await getDocs(collection(db, 'wedding'));
+            const q = query(collection(db, 'wedding'), orderBy('date', 'desc'));
+            const querySnapshot = await getDocs(q);
             let content = '';
+            let count = 0;
             querySnapshot.forEach((doc) => {
-              console.log(doc.id, "=>", doc.data());
+              
 
               const data = doc.data();
               const name = data.name;
@@ -908,9 +912,10 @@
                   date = dateObj.toISOString().split('T')[0]; // 'YYYY-MM-DD' 형식으로 변환
               }
               const idx = doc.id;
+              const liClass = count < 4 ? 'on' : '';
               
               content += `
-                  <li>
+                  <li class="${liClass}">
                       <div class="top-info">
                           <div class="name">${name}</div>
                           <div class="close">
@@ -921,12 +926,29 @@
                       <div class="note">${note}</div>
                   </li>
               `;
+              count++;
             });
             $("#guestbook-ul").append(content);
+            if(count > 4) {
+              $("#moreBtn").css("display", "block");
+            }else{
+              $("#moreBtn").css("display", "none");
+            }
           } catch (error) {
             console.error("Firestore에서 데이터 불러오기 오류:", error);
           }
         }
+
+        $("#moreBtn").on('click', function() {
+            $("#guestbook-ul li").each(function(index) {
+                $(this)
+                    .addClass("on")  // 모든 li 요소에 on 클래스 추가
+                    .stop()
+                    .fadeIn(300);  // 부드럽게 나타나도록 fadeIn 효과 적용
+            });
+
+            $("#moreBtn").css("display","none");
+        });
 
         // 방명록 삭제 버튼 클릭 이벤트 위임
         $("#guestbook-ul").on('click', '.delGuestBtn', async function() {
