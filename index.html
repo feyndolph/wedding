@@ -29,7 +29,11 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
   </script>
 </head>
-
+<div class="loadBox" id="loadBox2020">
+  <div class="in">
+  <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </div>
+  </div>
 <body class="flex justify-center box-border max-w-full antialiased text-[1.2rem] bg-[#efefef] font-['Gowun_Dodum']">
   <div class="main border w-[425px] bg-white text-center">
     <section
@@ -766,15 +770,15 @@
             <div class="hea">방명록 (축하 글)작성</div>
             <div class="att-fdver">
               <span class="nm"><span class="text">이름<b class="spot"></b></span></span>
-              <input type="text" placeholder flex items-center gap-[8px] leading-[1px]="이름을 입력해 주세요." name="name" maxlength="30" autocomplete="off">
+              <input type="text" placeholder flex items-center gap-[8px] leading-[1px]="이름을 입력해 주세요." id="name" name="name" maxlength="30" autocomplete="off">
             </div>
             <div class="att-fdver">
               <span class="nm"><span class="text">비밀번호<b class="spot"></b></span></span>
-              <input type="password" placeholder flex items-center gap-[8px] leading-[1px]="비밀번호를 입력해 주세요." name="password" maxlength="30" autocomplete="off">
+              <input type="password" placeholder flex items-center gap-[8px] leading-[1px]="비밀번호를 입력해 주세요." id="password" name="password" maxlength="30" autocomplete="off">
             </div>
             <div class="att-fdver">
               <span class="nm"><span class="text">내용<b class="spot"></b></span></span>
-              <textarea type="text" placeholder flex items-center gap-[8px] leading-[1px]="내용을 작성해 주세요. (최대 500자)" name="note" maxlength="500"
+              <textarea type="text" placeholder flex items-center gap-[8px] leading-[1px]="내용을 작성해 주세요. (최대 500자)" id="note" name="note" maxlength="500"
                 autocomplete="off"></textarea>
             </div>
             <div style="margin-top: 40px;">
@@ -797,19 +801,7 @@
         </h3>
         <div class="books-open-list m-[30px]">
           <ul id="guestbook-ul" class="books-open-list-ul">
-            <li>
-              <div class="top-info">
-                <div class="name">김도경</div>
-                <div class="close">
-                  <span style="visibility: hidden">2024년 4월 22일</span>
-                  <span class="xx" onclick="deBooks(this)" data-idx="107386"></span>
-                </div>
-              </div>
-
-              <div class="note">Happy wedding day💝 Looking forward your beautiful days! See you then🙏😍</div>
-              
-
-            </li>
+            
           </ul>
         </div>
         <div class="guestbook-area m-[30px]">
@@ -828,8 +820,7 @@
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
         import { getFirestore } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
-        import { collection, getDocs } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
-        import { Timestamp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+        import { collection, getDocs, addDoc, Timestamp, deleteDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
       
@@ -874,7 +865,7 @@
                   const dateObj = data.date.toDate(); // Timestamp를 Date 객체로 변환
                   date = dateObj.toISOString().split('T')[0]; // 'YYYY-MM-DD' 형식으로 변환
               }
-              const idx = data.idx;
+              const idx = doc.id;
               
               content += `
                   <li>
@@ -882,26 +873,132 @@
                           <div class="name">${name}</div>
                           <div class="close">
                               <span style="visibility: hidden">${date}</span>
-                              <span class="xx" onclick="deBooks(this)" data-idx="${idx}"></span>
+                              <span class="xx delGuestBtn" data-idx="${idx}"></span>
                           </div>
                       </div>
                       <div class="note">${note}</div>
                   </li>
               `;
-
-              $("#guestbook-ul").append(content);
-
-              
             });
+            $("#guestbook-ul").append(content);
           } catch (error) {
             console.error("Firestore에서 데이터 불러오기 오류:", error);
           }
         }
 
-        // loadBooks();
+        // 방명록 삭제 버튼 클릭 이벤트 위임
+        $("#guestbook-ul").on('click', '.delGuestBtn', async function() {
+            const idx = $(this).data("idx"); // data-idx 속성에서 값을 가져옴
+            if (!idx) {
+                alert("삭제할 방명록을 찾을 수 없습니다.");
+                return;
+            }
+
+            // 삭제 전에 비밀번호 입력 받기
+            const inputPassword = prompt("삭제를 위한 비밀번호를 입력하세요:");
+            if (!inputPassword) {
+                alert("비밀번호를 입력하지 않았습니다.");
+                return;
+            }
+
+            try {
+                // Firestore에서 해당 문서 가져오기
+                const docRef = doc(db, "wedding", idx);
+                const docSnapshot = await getDoc(docRef);
+                
+                if (docSnapshot.exists()) {
+                    const docData = docSnapshot.data();
+                    const storedPassword = docData.password; // 저장된 비밀번호 가져오기
+
+                    // 비밀번호가 일치하는지 확인
+                    if (inputPassword === storedPassword) {
+                        if (confirm("정말로 삭제하시겠습니까?")) {
+                            // 비밀번호가 일치하면 삭제
+                            await deleteDoc(docRef);
+                            alert("방명록이 삭제되었습니다.");
+                            location.reload(); // 삭제 후 페이지 새로고침
+                        }
+                    } else {
+                        alert("비밀번호가 일치하지 않습니다.");
+                    }
+                } else {
+                    alert("해당 방명록을 찾을 수 없습니다.");
+                }
+            } catch (error) {
+                console.error("삭제 오류:", error);
+                alert("삭제 중 문제가 발생했습니다.");
+            }
+        });
+
+        loadBooks();
+        var isBooksWriteLoading = false;
+
+        // 방명록 작성하기 버튼 클릭
+        $("#gustbk_op .att-fdver-btn").click(async function () {
+        const name = $("#name").val().trim();
+        const password = $("#password").val().trim();
+        const note = $("#note").val().trim();
+
+        // 유효성 검사
+        if (!name) {
+            alert('이름을 입력해주세요.');
+            $("#name").focus();
+            return;
+        }
+        if (!password) {
+            alert('비밀번호를 입력해주세요.');
+            $("#password").focus();
+            return;
+        }
+        if (!note) {
+            alert('방명록 내용을 입력해주세요.');
+            $("#note").focus();
+            return;
+        }
+        if (name.length < 1) {
+            alert("이름은 1글자 이상 입력해주세요.");
+            return;
+        }
+        if (password.length < 4) {
+            alert("비밀번호는 4글자 이상 입력해주세요.");
+            return;
+        }
+
+        if (!isBooksWriteLoading) {
+          isBooksWriteLoading = true;
+          loading(true);
+          try {
+              // Firestore에 데이터 추가
+              await addDoc(collection(db, "wedding"), {
+                  name: name,
+                  password: password, // 비밀번호 저장 (보안상 암호화 필요)
+                  note: note,
+                  date: Timestamp.now() // 현재 시간 추가
+              });
+
+              loading(false);
+              alert("방명록이 등록되었습니다!");
+              location.reload();
+          } catch (err) {
+              loading(false);
+              isBooksWriteLoading = false;
+              console.error("Firestore 저장 오류:", err);
+              alert("등록 중 문제가 발생했습니다.\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
+          }
+        }
+        });
+
       </script>
 
       <script>
+        function loading(go) {
+            if(go) {
+                $("#loadBox2020").css("display", "block");
+            }else{
+                $("#loadBox2020").css("display", "none");
+            }
+        }
+
         $(document).ready(function () {
           
           gubook_write_sctop = 0;
@@ -921,54 +1018,7 @@
             $("html, body").animate({ scrollTop: gubook_write_sctop }, 10); 
             $(this).parents(".wpopclass").css("display", "none"); 
           });
-          
-          // 방명록 삭제 버튼 클릭
-          $(".books-swiper .swiper-slide .close").click(function () { deBooks(this); });
-          var isBooksWriteLoading = false;
 
-          // 방명록 작성하기 버튼 클릭
-          $("#gustbk_op .att-fdver-btn").click(function () {
-
-            var data = $("#gustbk_op form").serializeObject();
-            if (!check.isNotNull(data.name)) { alert("이름을 입력해주세요."); return; }
-            if (!check.isNotNull(data.password)) { alert("비밀번호를 입력해주세요."); return; }
-            if (!check.isNotNull(data.note)) { alert("방명록 내용을 입력해주세요."); return; }
-
-            data.name = data.name.trim();
-            if (data.name.length < 1) {
-              alert("이름은 1글자 이상 입력해주세요."); return;
-            }
-
-            data.password = data.password.trim();
-            if (data.password.length < 4) {
-              alert("비밀번호는 4글자 이상 입력해주세요."); return;
-            }
-
-            if (!isBooksWriteLoading) {
-              isBooksWriteLoading = true;
-              loading(true);
-              $.ajax({
-                type: 'post',
-                //dataType : "text",
-                //contentType : "application/json; charset=utf-8",
-                data: data,
-                //async : false,
-                url: '/card-books/ncGgF35EJm',
-                headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-                success: function (data) {
-                  loading(false);
-                  location.reload();
-                },
-                error: function (err) {
-                  loading(false);
-                  isBooksWriteLoading = false;
-                  console.log(err);
-                  alert("등록 중에 문제가 발생했습니다.\r\n문의하기로 연락주시면 확인 즉시 도와드리겠습니다.");
-                }
-              });
-            }
-
-          });
         });
       </script>
     </section>
@@ -1003,7 +1053,7 @@
 
                   <a class="holder flex items-center gap-[8px] leading-[1px]" onclick="copy_to_clipboard2('actnm-1-1')">
                     <img src="./assets/images/copy.svg">
-                    <span>김도경</span>
+                    <span class="font-semibold">김도경</span> <span class="font-base">(김창수, 예영선) 의 아들</span>
                   </a>
 
                   <a class="accounts flex gap-[8px] text-[1.15rem]" onclick="copy_to_clipboard2('actnm-1-1')">
@@ -1022,7 +1072,7 @@
 
                   <a class="holder flex items-center gap-[8px] leading-[1px]" onclick="copy_to_clipboard2('actnm-1-2')">
                     <img src="./assets/images/copy.svg">
-                    <span>김재원</span>
+                    <span class="font-semibold">김재원</span> <span class="font-base">(김성헌, 김진유) 의 딸</span>
                   </a>
 
                   <a class="accounts" onclick="copy_to_clipboard2('actnm-1-2')">
