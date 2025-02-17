@@ -394,13 +394,11 @@
 /* 방명록 */
 .guestbook-write-page select,
 .guestbook-write-page input {
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
 }
 .guestbook-write-page input::placeholder {
   font-weight: normal !important;
-  font-size: 13px;
-  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
 }
 .guestbook-write-page input:focus {
   outline: none;
@@ -434,7 +432,7 @@
 }
 .guestbook-write-page .frm .hea {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   padding: 10px 0px 25px 0px;
   color: #000;
@@ -457,7 +455,7 @@
   padding: 13px 10px;
 }
 .guestbook-write-page .frm .put::placeholder {
-  font-size: 14px;
+  font-size: 16px;
   color: #999;
 }
 .guestbook-write-page .frm div > .put:last-child {
@@ -549,7 +547,6 @@
   height: 60px;
   border: none;
   box-sizing: border-box;
-  color: #000;
   font-size: 13px;
   width: 100%;
   color: #222;
@@ -560,7 +557,6 @@
   height: 60px;
   border: none;
   box-sizing: border-box;
-  color: #000;
   font-size: 13px;
   width: 100%;
   color: #222;
@@ -576,7 +572,6 @@
   height: 140px;
   border: none;
   box-sizing: border-box;
-  color: #000;
   font-size: 13px;
   width: 100%;
   color: #222;
@@ -691,6 +686,7 @@
 .accst02 .pack {
   display: block;
   font-size: 1.4rem;
+  font-weight: 600;
   height: 50px;
   line-height: 50px;
   text-align: center;
