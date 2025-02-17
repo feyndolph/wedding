@@ -162,10 +162,10 @@
       <div
         class="introMent anibox f17 hd visible animated fadeInUp font-base px-[33px] py-[35px] leading-[2] text-[#544f4f] text-[1.4rem]">
         <div id="intro-ment-area">
-          <p>100년 동안 당신을 모르고 사는 것보다,</p>
-          <p>당신을 알고 지금 죽는게 더 나아요.</p>
+          <p>사랑은 받을 때보다 줄 때 더 행복하고</p>
+          <p>기쁨은 혼자보다 함께할 때 더 아름답다.</p>
           <p>&nbsp;</p>
-          <p>- 디즈니, &lt;포카혼타스&gt; 中 -<br>&nbsp;</p>
+          <p>- 김남조, &lt;사랑의 기쁨&gt; 中 -<br>&nbsp;</p>
           <p>-</p>
           <p><br>평생 서로 귀하게 여기며<br>첫 마음 그대로 존중하고&nbsp;</p>
           <p>배려하며 살겠습니다.<br><br>오로지 믿음과 사랑을 약속하는 날<br>오셔서 축복해 주시면 더 없는 기쁨으로<br>간직하겠습니다.</p>
@@ -683,7 +683,7 @@
           $(".countdown .data-min").text(minutes);
           $(".countdown .data-sec").text(seconds);
           if (day >= 0) {
-            $("#call-comment").text("도경 ♥ 재원의 결혼식이 " + day + "일 남았습니다.");
+            $("#call-comment").html("도경 ♥ 재원의 결혼식이 <span style='color: #f79e9e; font-weight: 500;'>" + day + "일</span> 남았습니다.");
           } else {
             $("#call-comment").text("도경, 재원의 결혼식이 " + Math.abs(day) + "일 지났습니다.");
           }
